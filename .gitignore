@@ -1,0 +1,13 @@
+#Xcode
+*.xcworkspace/
+xcuserdata/
+
+# OS X
+.DS_Store
+._*
+
+# Build
+build/
+objects/
+release/
+

@@ -1,0 +1,363 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E144C251988076C00B4A69B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E144C241988076C00B4A69B /* UIKit.framework */; };
+		1E144C271988077200B4A69B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E144C261988077200B4A69B /* Foundation.framework */; };
+		1E144C2C198807AD00B4A69B /* UIImage+MCUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E144C2A198807AD00B4A69B /* UIImage+MCUI.h */; };
+		1E144C2D198807AD00B4A69B /* UIImage+MCUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E144C2B198807AD00B4A69B /* UIImage+MCUI.m */; };
+		1EFC5D4919880BEC00750CB5 /* MCUIButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EFC5D3519880BEC00750CB5 /* MCUIButton.h */; };
+		1EFC5D4A19880BEC00750CB5 /* MCUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFC5D3619880BEC00750CB5 /* MCUIButton.m */; };
+		1EFC5D4B19880BEC00750CB5 /* MCUIKeyboardViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EFC5D3719880BEC00750CB5 /* MCUIKeyboardViewController.h */; };
+		1EFC5D4C19880BEC00750CB5 /* MCUIKeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFC5D3819880BEC00750CB5 /* MCUIKeyboardViewController.m */; };
+		1EFC5D4D19880BEC00750CB5 /* MCUILabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EFC5D3919880BEC00750CB5 /* MCUILabel.h */; };
+		1EFC5D4E19880BEC00750CB5 /* MCUILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFC5D3A19880BEC00750CB5 /* MCUILabel.m */; };
+		1EFC5D4F19880BEC00750CB5 /* MCUIPanorama.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EFC5D3B19880BEC00750CB5 /* MCUIPanorama.h */; };
+		1EFC5D5019880BEC00750CB5 /* MCUIPanorama.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFC5D3C19880BEC00750CB5 /* MCUIPanorama.m */; };
+		1EFC5D5119880BEC00750CB5 /* MCUISegment.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EFC5D3D19880BEC00750CB5 /* MCUISegment.h */; };
+		1EFC5D5219880BEC00750CB5 /* MCUISegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFC5D3E19880BEC00750CB5 /* MCUISegment.m */; };
+		1EFC5D5319880BEC00750CB5 /* MCUISegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EFC5D3F19880BEC00750CB5 /* MCUISegmentedControl.h */; };
+		1EFC5D5419880BEC00750CB5 /* MCUISegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFC5D4019880BEC00750CB5 /* MCUISegmentedControl.m */; };
+		1EFC5D5519880BEC00750CB5 /* MCUISlider.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EFC5D4119880BEC00750CB5 /* MCUISlider.h */; };
+		1EFC5D5619880BEC00750CB5 /* MCUISlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFC5D4219880BEC00750CB5 /* MCUISlider.m */; };
+		1EFC5D5719880BEC00750CB5 /* MCUISliderThumbView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EFC5D4319880BEC00750CB5 /* MCUISliderThumbView.h */; };
+		1EFC5D5819880BEC00750CB5 /* MCUISliderThumbView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFC5D4419880BEC00750CB5 /* MCUISliderThumbView.m */; };
+		1EFC5D5919880BEC00750CB5 /* MCUISwitch.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EFC5D4519880BEC00750CB5 /* MCUISwitch.h */; };
+		1EFC5D5A19880BEC00750CB5 /* MCUISwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFC5D4619880BEC00750CB5 /* MCUISwitch.m */; };
+		1EFC5D5B19880BEC00750CB5 /* MCUITextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EFC5D4719880BEC00750CB5 /* MCUITextField.h */; };
+		1EFC5D5C19880BEC00750CB5 /* MCUITextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFC5D4819880BEC00750CB5 /* MCUITextField.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1E144C1C1988075700B4A69B /* MCUIKit.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = MCUIKit.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E144C241988076C00B4A69B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1E144C261988077200B4A69B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1E144C291988078A00B4A69B /* MCUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCUIKit.h; sourceTree = "<group>"; };
+		1E144C2A198807AD00B4A69B /* UIImage+MCUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MCUI.h"; sourceTree = "<group>"; };
+		1E144C2B198807AD00B4A69B /* UIImage+MCUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MCUI.m"; sourceTree = "<group>"; };
+		1E23A30D198AA09400F78F2B /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		1EFC5D3519880BEC00750CB5 /* MCUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUIButton.h; sourceTree = "<group>"; };
+		1EFC5D3619880BEC00750CB5 /* MCUIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCUIButton.m; sourceTree = "<group>"; };
+		1EFC5D3719880BEC00750CB5 /* MCUIKeyboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUIKeyboardViewController.h; sourceTree = "<group>"; };
+		1EFC5D3819880BEC00750CB5 /* MCUIKeyboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCUIKeyboardViewController.m; sourceTree = "<group>"; };
+		1EFC5D3919880BEC00750CB5 /* MCUILabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUILabel.h; sourceTree = "<group>"; };
+		1EFC5D3A19880BEC00750CB5 /* MCUILabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCUILabel.m; sourceTree = "<group>"; };
+		1EFC5D3B19880BEC00750CB5 /* MCUIPanorama.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUIPanorama.h; sourceTree = "<group>"; };
+		1EFC5D3C19880BEC00750CB5 /* MCUIPanorama.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCUIPanorama.m; sourceTree = "<group>"; };
+		1EFC5D3D19880BEC00750CB5 /* MCUISegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUISegment.h; sourceTree = "<group>"; };
+		1EFC5D3E19880BEC00750CB5 /* MCUISegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCUISegment.m; sourceTree = "<group>"; };
+		1EFC5D3F19880BEC00750CB5 /* MCUISegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUISegmentedControl.h; sourceTree = "<group>"; };
+		1EFC5D4019880BEC00750CB5 /* MCUISegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCUISegmentedControl.m; sourceTree = "<group>"; };
+		1EFC5D4119880BEC00750CB5 /* MCUISlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUISlider.h; sourceTree = "<group>"; };
+		1EFC5D4219880BEC00750CB5 /* MCUISlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCUISlider.m; sourceTree = "<group>"; };
+		1EFC5D4319880BEC00750CB5 /* MCUISliderThumbView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUISliderThumbView.h; sourceTree = "<group>"; };
+		1EFC5D4419880BEC00750CB5 /* MCUISliderThumbView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCUISliderThumbView.m; sourceTree = "<group>"; };
+		1EFC5D4519880BEC00750CB5 /* MCUISwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUISwitch.h; sourceTree = "<group>"; };
+		1EFC5D4619880BEC00750CB5 /* MCUISwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCUISwitch.m; sourceTree = "<group>"; };
+		1EFC5D4719880BEC00750CB5 /* MCUITextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUITextField.h; sourceTree = "<group>"; };
+		1EFC5D4819880BEC00750CB5 /* MCUITextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCUITextField.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1E144C191988075700B4A69B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E144C271988077200B4A69B /* Foundation.framework in Frameworks */,
+				1E144C251988076C00B4A69B /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E144C131988075700B4A69B = {
+			isa = PBXGroup;
+			children = (
+				1E23A30D198AA09400F78F2B /* Makefile */,
+				1E144C281988077800B4A69B /* MCUIKit */,
+				1E144C231988076100B4A69B /* Frameworks */,
+				1E144C1D1988075700B4A69B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1E144C1D1988075700B4A69B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1E144C1C1988075700B4A69B /* MCUIKit.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1E144C231988076100B4A69B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E144C261988077200B4A69B /* Foundation.framework */,
+				1E144C241988076C00B4A69B /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1E144C281988077800B4A69B /* MCUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				1E144C291988078A00B4A69B /* MCUIKit.h */,
+				1E144C2A198807AD00B4A69B /* UIImage+MCUI.h */,
+				1E144C2B198807AD00B4A69B /* UIImage+MCUI.m */,
+				1EFC5D3519880BEC00750CB5 /* MCUIButton.h */,
+				1EFC5D3619880BEC00750CB5 /* MCUIButton.m */,
+				1EFC5D3919880BEC00750CB5 /* MCUILabel.h */,
+				1EFC5D3A19880BEC00750CB5 /* MCUILabel.m */,
+				1EFC5D3B19880BEC00750CB5 /* MCUIPanorama.h */,
+				1EFC5D3C19880BEC00750CB5 /* MCUIPanorama.m */,
+				1EFC5D3D19880BEC00750CB5 /* MCUISegment.h */,
+				1EFC5D3E19880BEC00750CB5 /* MCUISegment.m */,
+				1EFC5D3F19880BEC00750CB5 /* MCUISegmentedControl.h */,
+				1EFC5D4019880BEC00750CB5 /* MCUISegmentedControl.m */,
+				1EFC5D4519880BEC00750CB5 /* MCUISwitch.h */,
+				1EFC5D4619880BEC00750CB5 /* MCUISwitch.m */,
+				1EFC5D4719880BEC00750CB5 /* MCUITextField.h */,
+				1EFC5D4819880BEC00750CB5 /* MCUITextField.m */,
+				1EFC5D3719880BEC00750CB5 /* MCUIKeyboardViewController.h */,
+				1EFC5D3819880BEC00750CB5 /* MCUIKeyboardViewController.m */,
+				1EFC5D4119880BEC00750CB5 /* MCUISlider.h */,
+				1EFC5D4219880BEC00750CB5 /* MCUISlider.m */,
+				1EFC5D4319880BEC00750CB5 /* MCUISliderThumbView.h */,
+				1EFC5D4419880BEC00750CB5 /* MCUISliderThumbView.m */,
+			);
+			name = MCUIKit;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1E144C1A1988075700B4A69B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EFC5D5119880BEC00750CB5 /* MCUISegment.h in Headers */,
+				1EFC5D5B19880BEC00750CB5 /* MCUITextField.h in Headers */,
+				1EFC5D4F19880BEC00750CB5 /* MCUIPanorama.h in Headers */,
+				1EFC5D4919880BEC00750CB5 /* MCUIButton.h in Headers */,
+				1EFC5D5519880BEC00750CB5 /* MCUISlider.h in Headers */,
+				1EFC5D5919880BEC00750CB5 /* MCUISwitch.h in Headers */,
+				1EFC5D5319880BEC00750CB5 /* MCUISegmentedControl.h in Headers */,
+				1EFC5D5719880BEC00750CB5 /* MCUISliderThumbView.h in Headers */,
+				1EFC5D4B19880BEC00750CB5 /* MCUIKeyboardViewController.h in Headers */,
+				1E144C2C198807AD00B4A69B /* UIImage+MCUI.h in Headers */,
+				1EFC5D4D19880BEC00750CB5 /* MCUILabel.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1E144C1B1988075700B4A69B /* MCUIKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E144C201988075700B4A69B /* Build configuration list for PBXNativeTarget "MCUIKit" */;
+			buildPhases = (
+				1E144C181988075700B4A69B /* Sources */,
+				1E144C191988075700B4A69B /* Frameworks */,
+				1E144C1A1988075700B4A69B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MCUIKit;
+			productName = MCUIKit;
+			productReference = 1E144C1C1988075700B4A69B /* MCUIKit.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1E144C141988075700B4A69B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Silas Schwarz";
+			};
+			buildConfigurationList = 1E144C171988075700B4A69B /* Build configuration list for PBXProject "MCUIKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1E144C131988075700B4A69B;
+			productRefGroup = 1E144C1D1988075700B4A69B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1E144C1B1988075700B4A69B /* MCUIKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1E144C181988075700B4A69B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EFC5D5619880BEC00750CB5 /* MCUISlider.m in Sources */,
+				1EFC5D5C19880BEC00750CB5 /* MCUITextField.m in Sources */,
+				1EFC5D5019880BEC00750CB5 /* MCUIPanorama.m in Sources */,
+				1EFC5D4E19880BEC00750CB5 /* MCUILabel.m in Sources */,
+				1E144C2D198807AD00B4A69B /* UIImage+MCUI.m in Sources */,
+				1EFC5D5219880BEC00750CB5 /* MCUISegment.m in Sources */,
+				1EFC5D5819880BEC00750CB5 /* MCUISliderThumbView.m in Sources */,
+				1EFC5D5419880BEC00750CB5 /* MCUISegmentedControl.m in Sources */,
+				1EFC5D4A19880BEC00750CB5 /* MCUIButton.m in Sources */,
+				1EFC5D4C19880BEC00750CB5 /* MCUIKeyboardViewController.m in Sources */,
+				1EFC5D5A19880BEC00750CB5 /* MCUISwitch.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1E144C1E1988075700B4A69B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1E144C1F1988075700B4A69B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1E144C211988075700B4A69B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				EXECUTABLE_PREFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"${inherited}",
+					"${SRCROOT}/../prefix/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"${inherited}",
+					"${SRCROOT}/../prefix/include",
+					/opt/iOSOpenDev/include,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = (
+					"${inherited}",
+					"${SRCROOT}/../prefix/lib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1E144C221988075700B4A69B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				EXECUTABLE_PREFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"${inherited}",
+					"${SRCROOT}/../prefix/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"${inherited}",
+					"${SRCROOT}/../prefix/include",
+					/opt/iOSOpenDev/include,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = (
+					"${inherited}",
+					"${SRCROOT}/../prefix/lib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E144C171988075700B4A69B /* Build configuration list for PBXProject "MCUIKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E144C1E1988075700B4A69B /* Debug */,
+				1E144C1F1988075700B4A69B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E144C201988075700B4A69B /* Build configuration list for PBXNativeTarget "MCUIKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E144C211988075700B4A69B /* Debug */,
+				1E144C221988075700B4A69B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1E144C141988075700B4A69B /* Project object */;
+}
