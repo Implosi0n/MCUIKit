@@ -10,46 +10,62 @@
 
 #import <objc/runtime.h>
 
+#ifndef SRCROOT
+# define SRCROOT @""
+#endif
+
 #define OUTSIDE 1
 #define HOOK 2
 
-#define VERSION HOOK
+#define VERSION OUTSIDE
+
+#if VERSION == OUTSIDE
+
+#if TARGET_IPHONE_SIMULATOR
+
+#define kMCApplicationsPath [SRCROOT stringByAppendingPathComponent:@"Applications"]
+
+#else
+
+#define kMCApplicationsPath @"/var/mobile/Applications"
+
+#endif
+
+NSString *MCFindSandboxWithBundleID(NSString *bundleID) {
+    NSArray *sandboxes = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:kMCApplicationsPath error:nil];
+    for (NSString *sandbox in sandboxes) {
+		NSArray *contents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:[kMCApplicationsPath stringByAppendingPathComponent:sandbox] error:nil];
+		for (NSString *content in contents) {
+			if ([content hasSuffix:@".app"]) {
+				NSDictionary *info = [NSDictionary dictionaryWithContentsOfFile:[NSString stringWithFormat:@"%@/%@/%@/Info.plist", kMCApplicationsPath, sandbox, content]];
+                if ([[info valueForKey:@"CFBundleIdentifier"] isEqualToString:bundleID]) {
+                    return [NSString stringWithFormat:@"%@/%@", kMCApplicationsPath, sandbox];
+                }
+			}
+		}
+    }
+    return nil;
+}
+
+static NSString *minecraftSandbox;
+
+#endif
 
 @implementation UIImage (MCUI)
 
+#if VERSION == OUTSIDE
+
 + (void)load {
-	static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-		Class class = object_getClass((id)self);
-		
-        SEL originalSelector = @selector(imageNamed:);
-        SEL swizzledSelector = @selector(mcui_imageNamed:);
-		
-        Method originalMethod = class_getInstanceMethod(class, originalSelector);
-        Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
-		
-        BOOL didAddMethod =
-		class_addMethod(class,
-						originalSelector,
-						method_getImplementation(swizzledMethod),
-						method_getTypeEncoding(swizzledMethod));
-		
-        if (didAddMethod) {
-            class_replaceMethod(class,
-								swizzledSelector,
-								method_getImplementation(originalMethod),
-								method_getTypeEncoding(originalMethod));
-        } else {
-            method_exchangeImplementations(originalMethod, swizzledMethod);
-        }
-    });
+	minecraftSandbox = MCFindSandboxWithBundleID(@"com.mojang.minecraftpe");
 }
 
-- (UIImage *)mcui_imageNamed:(NSString *)name {
+#endif
+
++ (UIImage *)mcui_imageNamed:(NSString *)name {
 #if VERSION == HOOK
-	return [self mcui_imageNamed:name];
+	return [self imageNamed:name];
 #else
-	
+	return [[UIImage alloc] initWithContentsOfFile:[minecraftSandbox stringByAppendingFormat:@"minecraftpe.app/%@", name]];
 #endif
 }
 

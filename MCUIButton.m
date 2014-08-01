@@ -37,7 +37,7 @@
 - (instancetype)initWithFrame:(CGRect)frame callback:(void (^)(MCUIButton *))callback {
     if (self = [super initWithFrame:frame]) {
 		self.callback = callback;
-		UIImage *spritesheet = [UIImage imageNamed:@"spritesheet.png"];
+		UIImage *spritesheet = [UIImage mcui_imageNamed:@"spritesheet.png"];
 		UIImage *pressedImage = [spritesheet mcui_subImageWithFrame:CGRectMake(0, 32, 8, 8)];
 		pressedImage = [pressedImage mcui_resize:CGSizeMake(16, 16)];
 		UIImage *unpressedImage = [spritesheet mcui_subImageWithFrame:CGRectMake(8, 32, 8, 8)];

@@ -13,6 +13,6 @@
 - (UIImage *)mcui_resize:(CGSize)size;
 - (UIImage *)mcui_subImageWithFrame:(CGRect)frame;
 
-- (UIImage *)mcui_imageNamed:(NSString *)name;
++ (UIImage *)mcui_imageNamed:(NSString *)name;
 
 @end

@@ -17,7 +17,7 @@
     if (self = [super initWithFrame:frame]) {
 		self.callback = callback;
 		
-		UIImage *touchgui = [UIImage imageNamed:@"touchgui.png"];
+		UIImage *touchgui = [UIImage mcui_imageNamed:@"touchgui.png"];
 		UIImage *sliderImage = [touchgui mcui_subImageWithFrame:CGRectMake(225, 125, 11, 17)];
 		
 		__block BOOL isOut;

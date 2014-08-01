@@ -42,7 +42,7 @@
 - (instancetype)initWithFrame:(CGRect)frame name:(NSString *)name callback:(void(^)(MCUISegment*))callback {
     if (self = [super initWithFrame:frame]) {
 		self.callback = callback;
-		UIImage *spriteSheet = [UIImage imageNamed:@"spritesheet.png"];
+		UIImage *spriteSheet = [UIImage mcui_imageNamed:@"spritesheet.png"];
 		self.pressedBackground = [[[spriteSheet mcui_subImageWithFrame:CGRectMake(0, 32, 8, 8)] mcui_resize:CGSizeMake(16, 16)] resizableImageWithCapInsets:UIEdgeInsetsMake(4, 4, 4, 4)];
 		self.regularBackground = [[[spriteSheet mcui_subImageWithFrame:CGRectMake(8, 32, 8, 8)] mcui_resize:CGSizeMake(16, 16)] resizableImageWithCapInsets:UIEdgeInsetsMake(4, 4, 4, 4)];
 		

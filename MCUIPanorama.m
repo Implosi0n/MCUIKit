@@ -55,12 +55,12 @@
 	self.top.contentMode = UIViewContentModeScaleToFill;
 	self.bottom.contentMode = UIViewContentModeScaleToFill;
 	
-	self.front.image = [UIImage imageNamed:@"panorama_0.png"];
-	self.right.image = [UIImage imageNamed:@"panorama_1.png"];
-	self.back.image = [UIImage imageNamed:@"panorama_2.png"];
-	self.left.image = [UIImage imageNamed:@"panorama_3.png"];
-	self.top.image = [UIImage imageNamed:@"panorama_4.png"];
-	self.bottom.image = [UIImage imageNamed:@"panorama_5.png"];
+	self.front.image = [UIImage mcui_imageNamed:@"panorama_0.png"];
+	self.right.image = [UIImage mcui_imageNamed:@"panorama_1.png"];
+	self.back.image = [UIImage mcui_imageNamed:@"panorama_2.png"];
+	self.left.image = [UIImage mcui_imageNamed:@"panorama_3.png"];
+	self.top.image = [UIImage mcui_imageNamed:@"panorama_4.png"];
+	self.bottom.image = [UIImage mcui_imageNamed:@"panorama_5.png"];
 	
 	[self addSubview:self.front];
 	[self addSubview:self.back];

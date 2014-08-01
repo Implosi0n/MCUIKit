@@ -7,7 +7,7 @@ ISDK=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Deve
 SSDK=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk
 
 ARMFLAGS=--sysroot=$(ISDK)
-SIMFLAGS=--sysroot=$(SSDK) -mios-simulator-version-min=5.1
+SIMFLAGS=--sysroot=$(SSDK) -mios-simulator-version-min=5.1 -DSRCROOT=@\"$(PWD)\"
 
 ODIR=objects
 RDIR=release

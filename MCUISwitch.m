@@ -35,7 +35,7 @@ UIImage *offImage;
 @synthesize callback = _callback;
 
 + (void)load {
-	UIImage *touchgui = [UIImage imageNamed:@"touchgui.png"];
+	UIImage *touchgui = [UIImage mcui_imageNamed:@"touchgui.png"];
 	offImage = [touchgui mcui_subImageWithFrame:CGRectMake(160, 206, kSwitchSize.width/2.0, kSwitchSize.height/2.0)];
 	onImage = [touchgui mcui_subImageWithFrame:CGRectMake(160 + kSwitchSize.width/2.0, 206, kSwitchSize.width/2.0, kSwitchSize.height/2.0)];
 }
