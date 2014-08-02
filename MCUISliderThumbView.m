@@ -8,6 +8,8 @@
 
 #import "MCUISliderThumbView.h"
 
+#import "NSObject+MCUIKit.h"
+
 @interface MCUISliderThumbView ()
 
 @property (strong) void(^callback)(MCUISliderThumbView*, UITouch*, int);
@@ -27,7 +29,7 @@
 		[self addSubview:imageView];
 		self.callback = callback;
 	}
-	[imageView release];
+	[imageView mcui_release];
 	return self;
 }
 

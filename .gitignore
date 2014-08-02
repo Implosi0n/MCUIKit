@@ -2,6 +2,9 @@
 *.xcworkspace/
 xcuserdata/
 
+# Test
+MCUIKitTest
+
 # OS X
 .DS_Store
 ._*

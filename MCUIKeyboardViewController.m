@@ -10,6 +10,8 @@
 #import "MCUILabel.h"
 #import "MCUIButton.h"
 
+#import "NSObject+MCUIKit.h"
+
 @interface MCUIKeyboardViewController () {
 	NSMutableString *_text;
 }
@@ -44,15 +46,15 @@ static BOOL blinkStatus = YES;
     if (self = [super init]) {
 		self.text = [textField.text mutableCopy];
 		self.name = name;
-		self.nameLabel = [[[MCUILabel alloc] initWithFrame:CGRectMake(10, 10 + [[UIApplication sharedApplication] statusBarFrame].size.width, self.view.frame.size.height - 10 - 10 - 132, 16)] autorelease];
+		self.nameLabel = [[[MCUILabel alloc] initWithFrame:CGRectMake(10, 10 + [[UIApplication sharedApplication] statusBarFrame].size.width, self.view.frame.size.height - 10 - 10 - 132, 16)] mcui_autorelease];
 		self.nameLabel.text = name;
 		self.view.backgroundColor = [UIColor colorWithRed:3.0/255.0 green:3.0/255.0 blue:3.0/255.0 alpha:1.0];
-		self.textBackground = [[[UIView alloc] initWithFrame:CGRectMake(10, 40 + [[UIApplication sharedApplication] statusBarFrame].size.width, self.view.frame.size.height - 10 - 10 - 132, 34)] autorelease];
+		self.textBackground = [[[UIView alloc] initWithFrame:CGRectMake(10, 40 + [[UIApplication sharedApplication] statusBarFrame].size.width, self.view.frame.size.height - 10 - 10 - 132, 34)] mcui_autorelease];
 		self.textBackground.layer.borderColor = [UIColor colorWithWhite:1.0 alpha:1.0].CGColor;
 		self.textBackground.layer.borderWidth = 2.0;
 		self.textBackground.backgroundColor = [UIColor clearColor];
 		
-		self.dummyTextField = [[[UITextView alloc] initWithFrame:CGRectMake(-10, -10, 10, 10)] autorelease];
+		self.dummyTextField = [[[UITextView alloc] initWithFrame:CGRectMake(-10, -10, 10, 10)] mcui_autorelease];
 		self.dummyTextField.delegate = self;
 		self.dummyTextField.editable = YES;
 		
@@ -72,7 +74,7 @@ static BOOL blinkStatus = YES;
 		
 		[self.doneButton setTitle:@"Done" forState:UIControlStateNormal];
 		
-		self.textView = [[[MCUILabel alloc] initWithFrame:CGRectMake(10, 10, 802, 16)] autorelease];
+		self.textView = [[[MCUILabel alloc] initWithFrame:CGRectMake(10, 10, 802, 16)] mcui_autorelease];
 		self.textView.text = self.text;
 		
 		[self.textBackground addSubview:self.textView];

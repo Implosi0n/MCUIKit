@@ -9,6 +9,8 @@
 #import "MCUIButton.h"
 #import "UIImage+MCUI.h"
 
+#import "NSObject+MCUIKit.h"
+
 #define kButtonTitleMainColor [UIColor colorWithRed:222.0/255.0 green:222.0/255.0 blue:222.0/255 alpha:1.0]
 #define kButtonTitleAltColor [UIColor colorWithRed:55.0/255.0 green:55.0/255.0 blue:55.0/255 alpha:1.0]
 

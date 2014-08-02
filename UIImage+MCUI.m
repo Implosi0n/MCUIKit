@@ -10,6 +10,8 @@
 
 #import <objc/runtime.h>
 
+#import "NSObject+MCUIKit.h"
+
 #ifndef SRCROOT
 # define SRCROOT @""
 #endif

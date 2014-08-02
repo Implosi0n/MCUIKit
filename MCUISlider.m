@@ -11,6 +11,8 @@
 #import "MCUISliderThumbView.h"
 #import "UIImage+MCUI.h"
 
+#import "NSObject+MCUIKit.h"
+
 @implementation MCUISlider
 
 - (instancetype)initWithFrame:(CGRect)frame spotCount:(NSUInteger)count callback:(void (^)(MCUISlider *, float, int))callback {
@@ -92,7 +94,7 @@
 				UIView *nextSpot = [[UIView alloc] initWithFrame:(CGRect){ .size = spotsize, .origin = CGPointMake(i * interval + 7, 10) }];
 				nextSpot.backgroundColor = [UIColor colorWithRed:144.0/255.0 green:144.0/255.0 blue:144.0/255.0 alpha:1.0];
 				[self insertSubview:nextSpot aboveSubview:sliderBar];
-				[nextSpot release];
+				[nextSpot mcui_release];
 			}
 		}
 		

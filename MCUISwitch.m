@@ -10,6 +10,8 @@
 
 #import "UIImage+MCUI.h"
 
+#import "NSObject+MCUIKit.h"
+
 @interface MCUISwitch () {
 	BOOL _on;
 }
@@ -50,7 +52,7 @@ UIImage *offImage;
 		self.callback = callback;
 		self.onImage = onImage;
 		self.offImage = offImage;
-		self.switchView = [[[UIImageView alloc] initWithFrame:self.bounds] autorelease];
+		self.switchView = [[[UIImageView alloc] initWithFrame:self.bounds] mcui_autorelease];
 		self.switchView.layer.magnificationFilter = kCAFilterNearest;
 		self.on = NO;
 		[self addSubview:self.switchView];
@@ -70,7 +72,7 @@ UIImage *offImage;
 }
 
 - (void)dealloc {
-	[super dealloc];
+	[super mcui_dealloc];
 }
 
 @end

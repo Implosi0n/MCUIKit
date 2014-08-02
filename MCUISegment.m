@@ -11,6 +11,8 @@
 
 #import "UIImage+MCUI.h"
 
+#import "NSObject+MCUIKit.h"
+
 #define kButtonTitleMainColor [UIColor colorWithRed:222.0/255.0 green:222.0/255.0 blue:222.0/255 alpha:1.0]
 #define kButtonTitleAltColor [UIColor colorWithRed:55.0/255.0 green:55.0/255.0 blue:55.0/255 alpha:1.0]
 
@@ -46,12 +48,12 @@
 		self.pressedBackground = [[[spriteSheet mcui_subImageWithFrame:CGRectMake(0, 32, 8, 8)] mcui_resize:CGSizeMake(16, 16)] resizableImageWithCapInsets:UIEdgeInsetsMake(4, 4, 4, 4)];
 		self.regularBackground = [[[spriteSheet mcui_subImageWithFrame:CGRectMake(8, 32, 8, 8)] mcui_resize:CGSizeMake(16, 16)] resizableImageWithCapInsets:UIEdgeInsetsMake(4, 4, 4, 4)];
 		
-		self.nameLabel = [[[MCUILabel alloc] initWithFrame:CGRectMake(0, 0, [name sizeWithFont:[UIFont fontWithName:@"Minecraft" size:16.0]].width, 16)] autorelease];
+		self.nameLabel = [[[MCUILabel alloc] initWithFrame:CGRectMake(0, 0, [name sizeWithFont:[UIFont fontWithName:@"Minecraft" size:16.0]].width, 16)] mcui_autorelease];
 		self.nameLabel.text = name;
 		[self.nameLabel setFont:[UIFont fontWithName:@"Minecraft" size:16.0]];
 		[self.nameLabel setShadowOffset:CGSizeMake(2, 2)];
 		
-		self.backgroundView = [[[UIImageView alloc] initWithFrame:self.bounds] autorelease];
+		self.backgroundView = [[[UIImageView alloc] initWithFrame:self.bounds] mcui_autorelease];
 		[self addSubview:self.backgroundView];
 		[self addSubview:self.nameLabel];
 		[self addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped)]];

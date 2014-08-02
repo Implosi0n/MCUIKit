@@ -9,6 +9,8 @@
 #import "MCUISegmentedControl.h"
 #import "MCUISegment.h"
 
+#import "NSObject+MCUIKit.h"
+
 @interface MCUISegmentedControl () {
 	NSInteger _selectedSegmentIndex;
 }

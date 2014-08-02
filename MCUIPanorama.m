@@ -9,6 +9,8 @@
 #import "MCUIPanorama.h"
 #import "UIImage+MCUI.h"
 
+#import "NSObject+MCUIKit.h"
+
 @interface MCUIPanorama ()
 
 @property (assign) CGFloat referenceSize;
@@ -27,17 +29,17 @@
 }
 
 - (void)initializeDefaultValues {
-	self.front = [[[UIImageView alloc] init] autorelease];
+	self.front = [[[UIImageView alloc] init] mcui_autorelease];
 	
 	self.referenceSize = self.frame.size.width > self.frame.size.height / 2.0 ? self.frame.size.width : self.frame.size.height / 2.0;
 	CGRect faceSize = CGRectMake(0, 0, self.referenceSize * 2.0, self.referenceSize * 2.0);
 	
-	self.front = [[[UIImageView alloc] initWithFrame:faceSize] autorelease];
-	self.back = [[[UIImageView alloc] initWithFrame:faceSize] autorelease];
-	self.left = [[[UIImageView alloc] initWithFrame:faceSize] autorelease];
-	self.right = [[[UIImageView alloc] initWithFrame:faceSize] autorelease];
-	self.top = [[[UIImageView alloc] initWithFrame:faceSize] autorelease];
-	self.bottom = [[[UIImageView alloc] initWithFrame:faceSize] autorelease];
+	self.front = [[[UIImageView alloc] initWithFrame:faceSize] mcui_autorelease];
+	self.back = [[[UIImageView alloc] initWithFrame:faceSize] mcui_autorelease];
+	self.left = [[[UIImageView alloc] initWithFrame:faceSize] mcui_autorelease];
+	self.right = [[[UIImageView alloc] initWithFrame:faceSize] mcui_autorelease];
+	self.top = [[[UIImageView alloc] initWithFrame:faceSize] mcui_autorelease];
+	self.bottom = [[[UIImageView alloc] initWithFrame:faceSize] mcui_autorelease];
 	
 	CGPoint panoramaCenter = CGPointMake(self.frame.size.width / 2.0, self.frame.size.height / 2.0);
 	
@@ -160,7 +162,7 @@
 }
 
 - (void)dealloc {
-	[super dealloc];
+	[super mcui_dealloc];
 }
 
 @end
