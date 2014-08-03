@@ -9,6 +9,7 @@
 #import "MCUILabel.h"
 
 #import "NSObject+MCUIKit.h"
+#import "NSBundle+MCUI.h"
 
 #define kGlyphMainColor [UIColor colorWithRed:203.0/255.0 green:203.0/255.0 blue:203.0/255.0 alpha:1.0]
 #define kGlyphAltColor [UIColor colorWithRed:50.0/255.0 green:50.0/255.0 blue:50.0/255.0 alpha:1.0]

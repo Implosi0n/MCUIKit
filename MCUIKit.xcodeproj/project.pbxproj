@@ -22,6 +22,22 @@
 		1E144C271988077200B4A69B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E144C261988077200B4A69B /* Foundation.framework */; };
 		1E144C2C198807AD00B4A69B /* UIImage+MCUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E144C2A198807AD00B4A69B /* UIImage+MCUI.h */; };
 		1E144C2D198807AD00B4A69B /* UIImage+MCUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E144C2B198807AD00B4A69B /* UIImage+MCUI.m */; };
+		1E3BD591198DC5E8006A5D97 /* NSBundle+MCUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E3BD58F198DC5E8006A5D97 /* NSBundle+MCUI.h */; };
+		1E3BD592198DC5E8006A5D97 /* NSBundle+MCUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E3BD590198DC5E8006A5D97 /* NSBundle+MCUI.m */; };
+		1E3BD594198DC88E006A5D97 /* GraphicsServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E3BD593198DC88E006A5D97 /* GraphicsServices.framework */; };
+		1E3BD595198DC896006A5D97 /* NSBundle+MCUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E3BD590198DC5E8006A5D97 /* NSBundle+MCUI.m */; };
+		1EF8963E198C715E0070E16E /* UIImage+MCUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E144C2B198807AD00B4A69B /* UIImage+MCUI.m */; };
+		1EF8963F198C715E0070E16E /* MCUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFC5D3619880BEC00750CB5 /* MCUIButton.m */; };
+		1EF89640198C715E0070E16E /* MCUILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFC5D3A19880BEC00750CB5 /* MCUILabel.m */; };
+		1EF89641198C715E0070E16E /* MCUIPanorama.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFC5D3C19880BEC00750CB5 /* MCUIPanorama.m */; };
+		1EF89642198C715E0070E16E /* MCUISegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFC5D3E19880BEC00750CB5 /* MCUISegment.m */; };
+		1EF89643198C715E0070E16E /* MCUISegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFC5D4019880BEC00750CB5 /* MCUISegmentedControl.m */; };
+		1EF89644198C715E0070E16E /* MCUISwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFC5D4619880BEC00750CB5 /* MCUISwitch.m */; };
+		1EF89645198C715E0070E16E /* MCUITextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFC5D4819880BEC00750CB5 /* MCUITextField.m */; };
+		1EF89646198C715E0070E16E /* MCUIKeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFC5D3819880BEC00750CB5 /* MCUIKeyboardViewController.m */; };
+		1EF89647198C715E0070E16E /* MCUISlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFC5D4219880BEC00750CB5 /* MCUISlider.m */; };
+		1EF89648198C715E0070E16E /* MCUISliderThumbView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFC5D4419880BEC00750CB5 /* MCUISliderThumbView.m */; };
+		1EF89649198C715E0070E16E /* NSObject+MCUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E0E5A2B198C065C000ADFB3 /* NSObject+MCUIKit.m */; };
 		1EFC5D4919880BEC00750CB5 /* MCUIButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EFC5D3519880BEC00750CB5 /* MCUIButton.h */; };
 		1EFC5D4A19880BEC00750CB5 /* MCUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFC5D3619880BEC00750CB5 /* MCUIButton.m */; };
 		1EFC5D4B19880BEC00750CB5 /* MCUIKeyboardViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EFC5D3719880BEC00750CB5 /* MCUIKeyboardViewController.h */; };
@@ -67,6 +83,9 @@
 		1E144C2A198807AD00B4A69B /* UIImage+MCUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MCUI.h"; sourceTree = "<group>"; };
 		1E144C2B198807AD00B4A69B /* UIImage+MCUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MCUI.m"; sourceTree = "<group>"; };
 		1E23A30D198AA09400F78F2B /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		1E3BD58F198DC5E8006A5D97 /* NSBundle+MCUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+MCUI.h"; sourceTree = "<group>"; };
+		1E3BD590198DC5E8006A5D97 /* NSBundle+MCUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+MCUI.m"; sourceTree = "<group>"; };
+		1E3BD593198DC88E006A5D97 /* GraphicsServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GraphicsServices.framework; path = System/Library/PrivateFrameworks/GraphicsServices.framework; sourceTree = SDKROOT; };
 		1EFC5D3519880BEC00750CB5 /* MCUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUIButton.h; sourceTree = "<group>"; };
 		1EFC5D3619880BEC00750CB5 /* MCUIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCUIButton.m; sourceTree = "<group>"; };
 		1EFC5D3719880BEC00750CB5 /* MCUIKeyboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUIKeyboardViewController.h; sourceTree = "<group>"; };
@@ -96,6 +115,7 @@
 			files = (
 				1E0E59FA198C05B1000ADFB3 /* CoreGraphics.framework in Frameworks */,
 				1E0E59FB198C05B1000ADFB3 /* UIKit.framework in Frameworks */,
+				1E3BD594198DC88E006A5D97 /* GraphicsServices.framework in Frameworks */,
 				1E0E59F8198C05B1000ADFB3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,6 +180,7 @@
 		1E144C231988076100B4A69B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1E3BD593198DC88E006A5D97 /* GraphicsServices.framework */,
 				1E144C261988077200B4A69B /* Foundation.framework */,
 				1E144C241988076C00B4A69B /* UIKit.framework */,
 				1E0E59F9198C05B1000ADFB3 /* CoreGraphics.framework */,
@@ -172,8 +193,6 @@
 			isa = PBXGroup;
 			children = (
 				1E144C291988078A00B4A69B /* MCUIKit.h */,
-				1E144C2A198807AD00B4A69B /* UIImage+MCUI.h */,
-				1E144C2B198807AD00B4A69B /* UIImage+MCUI.m */,
 				1EFC5D3519880BEC00750CB5 /* MCUIButton.h */,
 				1EFC5D3619880BEC00750CB5 /* MCUIButton.m */,
 				1EFC5D3919880BEC00750CB5 /* MCUILabel.h */,
@@ -196,6 +215,10 @@
 				1EFC5D4419880BEC00750CB5 /* MCUISliderThumbView.m */,
 				1E0E5A2A198C065C000ADFB3 /* NSObject+MCUIKit.h */,
 				1E0E5A2B198C065C000ADFB3 /* NSObject+MCUIKit.m */,
+				1E3BD58F198DC5E8006A5D97 /* NSBundle+MCUI.h */,
+				1E3BD590198DC5E8006A5D97 /* NSBundle+MCUI.m */,
+				1E144C2A198807AD00B4A69B /* UIImage+MCUI.h */,
+				1E144C2B198807AD00B4A69B /* UIImage+MCUI.m */,
 			);
 			name = MCUIKit;
 			sourceTree = "<group>";
@@ -218,6 +241,7 @@
 				1EFC5D5719880BEC00750CB5 /* MCUISliderThumbView.h in Headers */,
 				1EFC5D4B19880BEC00750CB5 /* MCUIKeyboardViewController.h in Headers */,
 				1E144C2C198807AD00B4A69B /* UIImage+MCUI.h in Headers */,
+				1E3BD591198DC5E8006A5D97 /* NSBundle+MCUI.h in Headers */,
 				1EFC5D4D19880BEC00750CB5 /* MCUILabel.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,8 +330,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E0E5A0D198C05B1000ADFB3 /* ViewController.m in Sources */,
+				1EF89645198C715E0070E16E /* MCUITextField.m in Sources */,
+				1EF89648198C715E0070E16E /* MCUISliderThumbView.m in Sources */,
+				1EF89642198C715E0070E16E /* MCUISegment.m in Sources */,
 				1E0E5A07198C05B1000ADFB3 /* AppDelegate.m in Sources */,
+				1EF89640198C715E0070E16E /* MCUILabel.m in Sources */,
+				1EF89646198C715E0070E16E /* MCUIKeyboardViewController.m in Sources */,
 				1E0E5A03198C05B1000ADFB3 /* main.m in Sources */,
+				1EF89641198C715E0070E16E /* MCUIPanorama.m in Sources */,
+				1EF89647198C715E0070E16E /* MCUISlider.m in Sources */,
+				1EF8963F198C715E0070E16E /* MCUIButton.m in Sources */,
+				1EF89643198C715E0070E16E /* MCUISegmentedControl.m in Sources */,
+				1EF89649198C715E0070E16E /* NSObject+MCUIKit.m in Sources */,
+				1EF8963E198C715E0070E16E /* UIImage+MCUI.m in Sources */,
+				1E3BD595198DC896006A5D97 /* NSBundle+MCUI.m in Sources */,
+				1EF89644198C715E0070E16E /* MCUISwitch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +356,7 @@
 				1EFC5D5C19880BEC00750CB5 /* MCUITextField.m in Sources */,
 				1EFC5D5019880BEC00750CB5 /* MCUIPanorama.m in Sources */,
 				1EFC5D4E19880BEC00750CB5 /* MCUILabel.m in Sources */,
+				1E3BD592198DC5E8006A5D97 /* NSBundle+MCUI.m in Sources */,
 				1E144C2D198807AD00B4A69B /* UIImage+MCUI.m in Sources */,
 				1EFC5D5219880BEC00750CB5 /* MCUISegment.m in Sources */,
 				1E0E5A2D198C065C000ADFB3 /* NSObject+MCUIKit.m in Sources */,
@@ -361,12 +399,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"${inherited}",
 					"${SRCROOT}/../prefix/Frameworks",
+					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MCUIKitTest/MCUIKitTest-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
+					"SRCROOT=@\\\"${SRCROOT}\\\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"${inherited}",
@@ -391,6 +431,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"${inherited}",
 					"${SRCROOT}/../prefix/Frameworks",
+					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MCUIKitTest/MCUIKitTest-Prefix.pch";
@@ -486,6 +527,11 @@
 					"${SRCROOT}/../prefix/Frameworks",
 				);
 				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"SRCROOT=@\\\"${SRCROOT}\\\"",
+				);
 				HEADER_SEARCH_PATHS = (
 					"${inherited}",
 					"${SRCROOT}/../prefix/include",
@@ -534,6 +580,7 @@
 				1E0E5A24198C05B2000ADFB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1E144C171988075700B4A69B /* Build configuration list for PBXProject "MCUIKit" */ = {
 			isa = XCConfigurationList;

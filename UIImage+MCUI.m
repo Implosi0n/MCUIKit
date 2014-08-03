@@ -10,65 +10,33 @@
 
 #import <objc/runtime.h>
 
+#import "NSBundle+MCUI.h"
 #import "NSObject+MCUIKit.h"
 
-#ifndef SRCROOT
-# define SRCROOT @""
-#endif
-
-#define OUTSIDE 1
-#define HOOK 2
-
-#define VERSION OUTSIDE
-
-#if VERSION == OUTSIDE
-
-#if TARGET_IPHONE_SIMULATOR
-
-#define kMCApplicationsPath [SRCROOT stringByAppendingPathComponent:@"Applications"]
-
-#else
-
-#define kMCApplicationsPath @"/var/mobile/Applications"
-
-#endif
-
-NSString *MCFindSandboxWithBundleID(NSString *bundleID) {
-    NSArray *sandboxes = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:kMCApplicationsPath error:nil];
-    for (NSString *sandbox in sandboxes) {
-		NSArray *contents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:[kMCApplicationsPath stringByAppendingPathComponent:sandbox] error:nil];
-		for (NSString *content in contents) {
-			if ([content hasSuffix:@".app"]) {
-				NSDictionary *info = [NSDictionary dictionaryWithContentsOfFile:[NSString stringWithFormat:@"%@/%@/%@/Info.plist", kMCApplicationsPath, sandbox, content]];
-                if ([[info valueForKey:@"CFBundleIdentifier"] isEqualToString:bundleID]) {
-                    return [NSString stringWithFormat:@"%@/%@", kMCApplicationsPath, sandbox];
-                }
-			}
-		}
-    }
-    return nil;
-}
-
-static NSString *minecraftSandbox;
-
-#endif
+static UIImage *terrain_atlas;
+static UIImage *items_opaque;
 
 @implementation UIImage (MCUI)
 
-#if VERSION == OUTSIDE
-
-+ (void)load {
-	minecraftSandbox = MCFindSandboxWithBundleID(@"com.mojang.minecraftpe");
++ (void)initialize {
+	terrain_atlas = [[self mcui_imageNamed:@"terrain-atlas.tga"] mcui_retain];
+	items_opaque = [[self mcui_imageNamed:@"items-opaque.png"] mcui_retain];
 }
 
-#endif
-
 + (UIImage *)mcui_imageNamed:(NSString *)name {
-#if VERSION == HOOK
-	return [self imageNamed:name];
-#else
-	return [[UIImage alloc] initWithContentsOfFile:[minecraftSandbox stringByAppendingFormat:@"minecraftpe.app/%@", name]];
-#endif
+	return [[[UIImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] mcui_pathForResource:[name stringByDeletingPathExtension] ofType:[name pathExtension]]] mcui_autorelease];
+}
+
++ (UIImage *)mcui_imageWithID:(uint16_t)imageID damage:(uint16_t)damage {
+	return [self mcui_imagesWithID:imageID damage:damage][0];
+}
+
++ (NSArray *)mcui_imagesWithID:(uint16_t)imageID damage:(uint16_t)damage {
+	
+}
+
++ (MCUIImageType)typeOfImageWithID:(uint16_t)imageID damage:(uint16_t)damage {
+	
 }
 
 - (UIImage *)mcui_resize:(CGSize)size {
