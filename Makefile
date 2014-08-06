@@ -2,8 +2,7 @@
 TARGET=MCUIKit
 
 CC=clang
-CFLAGS=
-LFLAGS=-fno-objc-arc -framework UIKit -framework CoreGraphics -framework QuartzCore -framework Foundation -dynamiclib -install_name /Library/Frameworks/$(TARGET).framework/$(TARGET)
+LFLAGS=-fno-objc-arc -F/System/Library/PrivateFrameworks -framework UIKit -framework CoreGraphics -framework QuartzCore -framework Foundation -framework GraphicsServices -dynamiclib -install_name /Library/Frameworks/$(TARGET).framework/$(TARGET)
 
 ISDK=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk
 SSDK=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk

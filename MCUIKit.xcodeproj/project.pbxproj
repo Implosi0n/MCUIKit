@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		1EE6D6131992C10D00E1C137 /* MCUIKit-Release */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 1EE6D6141992C10D00E1C137 /* Build configuration list for PBXAggregateTarget "MCUIKit-Release" */;
+			buildPhases = (
+				1EE6D6171992C11200E1C137 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "MCUIKit-Release";
+			productName = "MCUIKit-Release";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		1E0E59F8198C05B1000ADFB3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E144C261988077200B4A69B /* Foundation.framework */; };
 		1E0E59FA198C05B1000ADFB3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E0E59F9198C05B1000ADFB3 /* CoreGraphics.framework */; };
@@ -331,6 +345,7 @@
 			targets = (
 				1E144C1B1988075700B4A69B /* MCUIKit */,
 				1E0E59F6198C05B1000ADFB3 /* MCUIKitTest */,
+				1EE6D6131992C10D00E1C137 /* MCUIKit-Release */,
 			);
 		};
 /* End PBXProject section */
@@ -347,6 +362,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1EE6D6171992C11200E1C137 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "cd ${SRCROOT}\nenv -i make clean\nenv -i make";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1E0E59F3198C05B1000ADFB3 /* Sources */ = {
@@ -606,6 +637,20 @@
 			};
 			name = Release;
 		};
+		1EE6D6151992C10D00E1C137 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1EE6D6161992C10D00E1C137 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -635,6 +680,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		1EE6D6141992C10D00E1C137 /* Build configuration list for PBXAggregateTarget "MCUIKit-Release" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EE6D6151992C10D00E1C137 /* Debug */,
+				1EE6D6161992C10D00E1C137 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

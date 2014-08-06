@@ -8,8 +8,6 @@
 
 #import "NSObject+MCUIKit.h"
 
-
-
 @implementation NSObject (MCUIKit)
 
 #if !__has_feature(objc_arc)
@@ -17,6 +15,10 @@
 # define RELEASE(obj) [obj release]
 # define AUTORELEASE(obj) [obj autorelease]
 # define DEALLOC(obj) [obj dealloc]
+# undef mcui_dealloc
+# undef mcui_retain
+# undef mcui_release
+# undef mcui_autorelease
 #else
 # define RETAIN(obj) (obj)
 # define RELEASE(obj)

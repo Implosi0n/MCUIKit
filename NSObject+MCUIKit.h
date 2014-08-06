@@ -8,15 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-#if !__has_feature(objc_arc)
-# define mcui_retain retain
-# define mcui_release release
-# define mcui_autorelease autorelease
-# define mcui_dealloc dealloc
-#else
-
-#endif /* objc_arc */
-
 @interface NSObject (MCUIKit)
 
 - (void)mcui_dealloc;
@@ -26,3 +17,12 @@
 - (void)mcui_release;
 
 @end
+
+#if !__has_feature(objc_arc)
+# define mcui_retain retain
+# define mcui_release release
+# define mcui_autorelease autorelease
+# define mcui_dealloc dealloc
+#else
+
+#endif /* objc_arc */
