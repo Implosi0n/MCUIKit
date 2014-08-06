@@ -43,17 +43,14 @@ directories:
 	@mkdir -p $(ODIR)/i386
 	@mkdir -p $(ODIR)/x86_64
 	@mkdir -p $(RDIR)/$(TARGET).framework/Headers
-	@mkdir -p $(RDIR)/include/$(TARGET)
 	@mkdir -p $(RDIR)/dpkg-root/DEBIAN
 	@mkdir -p $(RDIR)/dpkg-root/Library/Frameworks
 
 framework: armv7 armv7s arm64 i386 x86_64
 	lipo -create $(patsubst %,$(ODIR)/%/$(TARGET).dylib,$^) -o $(RDIR)/$(TARGET).framework/$(TARGET)
-	@cp $(RDIR)/$(TARGET).framework/$(TARGET) $(RDIR)/lib$(TARGET).dylib
 
 headers:
 	/usr/local/opt/coreutils/libexec/gnubin/cp -t $(RDIR)/$(TARGET).framework/Headers $(HEADERS)
-	@cp -r $(RDIR)/$(TARGET).framework/Headers/. $(RDIR)/include/$(TARGET)
 
 armv7 armv7s arm64:
 	cd $(ODIR)/$@ ; $(CC) $(CFLAGS) -arch $@ $(ARMFLAGS) -c $(INP)
