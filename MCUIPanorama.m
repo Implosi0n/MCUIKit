@@ -72,6 +72,12 @@
 	[self addSubview:self.bottom];
 	
 	self.zoomFactor = self.referenceSize * 0.6;
+	
+	[CATransaction setAnimationDuration:0];
+	[CATransaction begin];
+	[self render];
+	[CATransaction commit];
+	[CATransaction flush];
 }
 
 - (void)pan {

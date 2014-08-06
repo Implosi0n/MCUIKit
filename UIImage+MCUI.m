@@ -13,6 +13,10 @@
 #import "NSBundle+MCUI.h"
 #import "NSObject+MCUIKit.h"
 
+#import "ItemList.h"
+
+#define MCUIItem(id, damage) [NSString stringWithFormat:@"%.3d %.2d", id, damage]
+
 static UIImage *terrain_atlas;
 static UIImage *items_opaque;
 
@@ -27,16 +31,38 @@ static UIImage *items_opaque;
 	return [[[UIImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] mcui_pathForResource:[name stringByDeletingPathExtension] ofType:[name pathExtension]]] mcui_autorelease];
 }
 
++ (NSDictionary *)mcui_itemWithID:(uint16_t)imageID damage:(uint16_t)damage {
+	return ItemList()[MCUIItem(imageID, damage)] ? ItemList()[MCUIItem(imageID, damage)] : ItemList()[MCUIItem(imageID, 0)];
+}
+
 + (UIImage *)mcui_imageWithID:(uint16_t)imageID damage:(uint16_t)damage {
 	return [self mcui_imagesWithID:imageID damage:damage][0];
 }
 
-+ (NSArray *)mcui_imagesWithID:(uint16_t)imageID damage:(uint16_t)damage {
-	
++ (UIImage *)mcui_imageWithItem:(NSDictionary *)item {
+	UIImage *largeImage = [self mcui_imageNamed:item[@"file"]];
+	NSDictionary *image = KnownImages()[item[@"file"]];
+	if (image) {
+		CGFloat ratio = largeImage.size.height / [image[@"height"] floatValue];
+		CGFloat itemWidth = [image[@"item"][@"height"] floatValue] * ratio;
+		CGFloat itemHeight = [image[@"item"][@"width"] floatValue] * ratio;
+		return [largeImage mcui_subImageWithFrame:CGRectMake(itemWidth * [item[@"x"] intValue], itemHeight * [item[@"y"] intValue], itemWidth, itemHeight)];
+	}
+	return [largeImage mcui_subImageWithFrame:CGRectMake(16 * [item[@"x"] intValue], 16 * [item[@"y"] intValue], 16, 16)];
 }
 
-+ (MCUIImageType)typeOfImageWithID:(uint16_t)imageID damage:(uint16_t)damage {
-	
++ (NSArray *)mcui_imagesWithID:(uint16_t)imageID damage:(uint16_t)damage {
+	NSDictionary *item = [self mcui_itemWithID:imageID damage:damage];
+	NSMutableArray *ret = [NSMutableArray array];
+	for (NSDictionary *image in item[@"Images"]) {
+		[ret addObject:[self mcui_imageWithItem:image]];
+	}
+	return [NSArray arrayWithArray:ret];
+}
+
++ (MCUIImageType)mcui_typeOfImageWithID:(uint16_t)imageID damage:(uint16_t)damage {
+	NSDictionary *item = [self mcui_itemWithID:imageID damage:damage];
+	return (MCUIImageType)[item[@"renderType"] intValue];
 }
 
 - (UIImage *)mcui_resize:(CGSize)size {

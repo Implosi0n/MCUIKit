@@ -8,7 +8,7 @@
 
 #import "NSObject+MCUIKit.h"
 
-#import "NSObject+MCUIKit.h"
+
 
 @implementation NSObject (MCUIKit)
 

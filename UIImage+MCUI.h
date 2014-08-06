@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 
 typedef enum {
-	kMCUIImageBlock,
-	kMCUIImageItem
+	kMCUIImageUnknown = -1,
+	kMCUIImageBlock = 0,
+	kMCUIImageItem = 1
 } MCUIImageType;
 
 @interface UIImage (MCUI)
@@ -20,7 +21,7 @@ typedef enum {
 + (UIImage *)mcui_imageWithID:(uint16_t)imageID damage:(uint16_t)damage;
 + (NSArray *)mcui_imagesWithID:(uint16_t)imageID damage:(uint16_t)damage;
 
-+ (MCUIImageType)typeOfImageWithID:(uint16_t)imageID damage:(uint16_t)damage;
++ (MCUIImageType)mcui_typeOfImageWithID:(uint16_t)imageID damage:(uint16_t)damage;
 
 - (UIImage *)mcui_resize:(CGSize)size;
 - (UIImage *)mcui_subImageWithFrame:(CGRect)frame;
