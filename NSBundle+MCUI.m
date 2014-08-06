@@ -16,7 +16,9 @@
 #define OUTSIDE 1
 #define HOOK 2
 
-#define VERSION OUTSIDE
+#ifndef VERSION
+# define VERSION OUTSIDE
+#endif /* VERSION */
 
 #if VERSION == OUTSIDE
 

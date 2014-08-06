@@ -1,7 +1,18 @@
 
 TARGET=MCUIKit
 
+VERSION ?= outside
+
 CC=clang
+
+ifeq ($(VERSION), outside)
+	CFLAGS=-DVERSION=1
+endif
+
+ifeq ($(VERSION), hook)
+	CFLAGS=-DVERSION=2
+endif
+
 LFLAGS=-fno-objc-arc -F/System/Library/PrivateFrameworks -framework UIKit -framework CoreGraphics -framework QuartzCore -framework Foundation -framework GraphicsServices -dynamiclib -install_name /Library/Frameworks/$(TARGET).framework/$(TARGET)
 
 ISDK=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk
