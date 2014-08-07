@@ -2,6 +2,7 @@
 TARGET=MCUIKit
 
 VERSION ?= outside
+DEBUG ?= yes
 
 CC=clang
 
@@ -11,6 +12,14 @@ endif
 
 ifeq ($(VERSION), hook)
 	CFLAGS=-DVERSION=2
+endif
+
+ifeq ($(DEBUG), no)
+	CFLAGS += -O3
+endif
+
+ifeq ($(DEBUG), yes)
+	CFLAGS += -O0
 endif
 
 LFLAGS=-fno-objc-arc -F/System/Library/PrivateFrameworks -framework UIKit -framework CoreGraphics -framework QuartzCore -framework Foundation -framework GraphicsServices -dynamiclib -install_name /Library/Frameworks/$(TARGET).framework/$(TARGET)
@@ -50,7 +59,7 @@ framework: armv7 armv7s arm64 i386 x86_64
 	lipo -create $(patsubst %,$(ODIR)/%/$(TARGET).dylib,$^) -o $(RDIR)/$(TARGET).framework/$(TARGET)
 
 headers:
-	/usr/local/opt/coreutils/libexec/gnubin/cp -t $(RDIR)/$(TARGET).framework/Headers $(HEADERS)
+	find . -name "*.h" -maxdepth 0 -exec cp {} $(RDIR)/$(TARGET).framework/Headers \;
 
 armv7 armv7s arm64:
 	cd $(ODIR)/$@ ; $(CC) $(CFLAGS) -arch $@ $(ARMFLAGS) -c $(INP)
