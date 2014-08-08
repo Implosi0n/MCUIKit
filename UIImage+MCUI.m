@@ -28,7 +28,8 @@ static UIImage *items_opaque;
 }
 
 + (UIImage *)mcui_imageNamed:(NSString *)name {
-	return [[[UIImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] mcui_pathForResource:[name stringByDeletingPathExtension] ofType:[name pathExtension]]] mcui_autorelease];
+	NSString *path = [[NSBundle mainBundle] mcui_pathForResource:[name stringByDeletingPathExtension] ofType:[name pathExtension]];
+	return [[[UIImage alloc] initWithContentsOfFile:path] mcui_autorelease];
 }
 
 + (NSDictionary *)mcui_itemWithID:(uint16_t)imageID damage:(uint16_t)damage {

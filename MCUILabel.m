@@ -42,9 +42,15 @@
 			altColor = Color(50, 50, 50, 255);
 			offset = CGSizeMake(2, 2);
 			break;
+		case kMCUILabelStyleSection:
 		case kMCUILabelStyleMenu:
 			mainColor = Color(253, 253, 253, 255);
 			altColor = Color(62, 62, 62, 255);
+			offset = CGSizeMake(2, 2);
+			break;
+		case kMCUILabelStyleOption:
+			mainColor = Color(186, 186, 186, 255);
+			altColor = Color(45, 45, 45, 255);
 			offset = CGSizeMake(2, 2);
 			break;
 		default:

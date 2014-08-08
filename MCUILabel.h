@@ -11,7 +11,9 @@
 typedef enum {
 	kMCUILabelStylePlain = 0,
 	kMCUILabelStyleShadowed = 1,
-	kMCUILabelStyleMenu = 2
+	kMCUILabelStyleMenu = 2,
+	kMCUILabelStyleSection = 3,
+	kMCUILabelStyleOption = 4
 } MCUILabelStyle;
 
 @interface MCUILabel : UILabel

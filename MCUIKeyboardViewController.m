@@ -44,7 +44,7 @@ static BOOL blinkStatus = YES;
 
 - (instancetype)initWithName:(NSString *)name textField:(MCUITextField *)textField {
     if (self = [super init]) {
-		self.text = textField.text ? [textField.text mutableCopy] : [@"" mutableCopy];
+		self.text = textField.text;
 		self.name = name;
 		self.nameLabel = [[[MCUILabel alloc] initWithFrame:CGRectMake(10, 10 + [[UIApplication sharedApplication] statusBarFrame].size.width, self.view.frame.size.height - 10 - 10 - 132, 16)] mcui_autorelease];
 		self.nameLabel.text = name;
@@ -61,13 +61,11 @@ static BOOL blinkStatus = YES;
 		self.doneButtonCallback = [^(MCUIButton *button) {
 			[self.blinker invalidate];
 			if (!blinkStatus) {
-				[self.text deleteCharactersInRange:NSMakeRange(self.text.length - 1, 1)];
+				[_text deleteCharactersInRange:NSMakeRange(self.text.length - 1, 1)];
 			}
-			[textField setText:self.text];
-			[textField callBackWithText:self.text];
-			[self dismissViewControllerAnimated:YES completion:^{
-				
-			}];
+			[textField setText:[NSString stringWithString:self.text]];
+			[textField callBackWithText:[NSString stringWithString:self.text]];
+			[self dismissViewControllerAnimated:YES completion:^{}];
 		} mcui_retain];
 		
 		self.doneButton = [[MCUIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.height - 132, [[UIApplication sharedApplication] statusBarFrame].size.width, 132, 52) callback:self.doneButtonCallback];
@@ -97,9 +95,9 @@ static BOOL blinkStatus = YES;
 
 - (void)blink {
 	if (blinkStatus) {
-		[self.text appendString:@"_"];
+		[_text appendString:@"_"];
 	} else {
-		[self.text deleteCharactersInRange:NSMakeRange(self.text.length - 1, 1)];
+		[_text deleteCharactersInRange:NSMakeRange(self.text.length - 1, 1)];
 	}
 	blinkStatus = !blinkStatus;
 	[self.textView setText:self.text];
@@ -114,8 +112,8 @@ static BOOL blinkStatus = YES;
 		self.doneButtonCallback(self.doneButton);
 		return NO;
 	}
-	[self.text replaceCharactersInRange:range withString:text];
-	[self.textView setText:self.text];
+	[_text replaceCharactersInRange:range withString:text];
+	[self.textView setText:[NSString stringWithString:self.text]];
 	return YES;
 }
 
@@ -129,14 +127,17 @@ static BOOL blinkStatus = YES;
     // Dispose of any resources that can be recreated.
 }
 
-- (NSMutableString *)text {
-	return _text;
+- (NSString *)text {
+	return [NSString stringWithString:_text];
 }
 
-- (void)setText:(NSMutableString *)text {
-	_text = text;
-	[self.textView setText:_text];
-	[self.dummyTextField setText:_text];
+- (void)setText:(NSString *)text {
+	if (_text) {
+		[_text mcui_release];
+	}
+	_text = [[NSMutableString alloc] initWithString:text];
+	[self.textView setText:text];
+	[self.dummyTextField setText:text];
 }
 
 - (void)mcui_dealloc {

@@ -12,7 +12,7 @@
 
 @interface MCUIKeyboardViewController : UIViewController <UITextViewDelegate>
 
-@property (strong) NSMutableString *text;
+@property (strong) NSString *text;
 @property (strong) NSString *name;
 
 - (instancetype)initWithName:(NSString *)name textField:(MCUITextField *)textField;

@@ -24,12 +24,12 @@
 
 @end
 
-UIImage *onImage;
-UIImage *offImage;
+#define kSwitchSize ((CGSize){ .width = 39.0 * 2.0, .height = 20.0 * 2.0 })
 
-#define kSwitchSize ((CGSize){ .width = 38.0 * 2.0, .height = 19.0 * 2.0 })
-
-@implementation MCUISwitch
+@implementation MCUISwitch {
+	UIImage *onImage;
+	UIImage *offImage;
+}
 
 @synthesize switchView = _switchView;
 @synthesize onImage = _onImage;
@@ -37,9 +37,7 @@ UIImage *offImage;
 @synthesize callback = _callback;
 
 + (void)load {
-	UIImage *touchgui = [UIImage mcui_imageNamed:@"touchgui.png"];
-	offImage = [touchgui mcui_subImageWithFrame:CGRectMake(160, 206, kSwitchSize.width/2.0, kSwitchSize.height/2.0)];
-	onImage = [touchgui mcui_subImageWithFrame:CGRectMake(160 + kSwitchSize.width/2.0, 206, kSwitchSize.width/2.0, kSwitchSize.height/2.0)];
+	NSLog(@"%@", [UIImage mcui_imageNamed:@"touchgui.png"]);
 }
 
 - (void)tapped {
@@ -49,6 +47,9 @@ UIImage *offImage;
 
 - (instancetype)initWithFrame:(CGRect)frame callback:(void (^)(MCUISwitch *, BOOL))callback {
     if (self = [super initWithFrame:(CGRect){ .origin = frame.origin, .size = kSwitchSize }]) {
+		UIImage *touchgui = [UIImage mcui_imageNamed:@"touchgui.png"];
+		offImage = [[touchgui mcui_subImageWithFrame:CGRectMake(160, 226, kSwitchSize.width/2.0, kSwitchSize.height/2.0)] mcui_resize:kSwitchSize];
+		onImage = [[touchgui mcui_subImageWithFrame:CGRectMake(160 + kSwitchSize.width/2.0, 226, kSwitchSize.width/2.0, kSwitchSize.height/2.0)] mcui_resize:kSwitchSize];
 		self.callback = callback;
 		self.onImage = onImage;
 		self.offImage = offImage;
