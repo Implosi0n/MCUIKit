@@ -7,10 +7,9 @@
 //
 
 #import "MCUIItemView.h"
-
 #import "UIImage+MCUI.h"
-
 #import "MCUIBlockView.h"
+#import "NSObject+MCUIKit.h"
 
 @implementation MCUIItemView {
 	UIImageView *itemImageView;
@@ -19,11 +18,11 @@
 + (instancetype)itemViewWithFrame:(CGRect)frame id:(uint16_t)itemID damage:(uint16_t)damage {
 	switch ([UIImage mcui_typeOfImageWithID:itemID damage:damage]) {
 		case kMCUIImageItem:
-			return [[MCUIItemView alloc] initWithFrame:frame id:itemID damage:damage];
+			return [[[MCUIItemView alloc] initWithFrame:frame id:itemID damage:damage] mcui_autorelease];
 		case kMCUIImageBlock:
-			return [[MCUIBlockView alloc] initWithFrame:frame id:itemID damage:damage];
+			return [[[MCUIBlockView alloc] initWithFrame:frame id:itemID damage:damage] mcui_autorelease];
 		default:
-			return [[MCUIItemView alloc] initWithFrame:frame id:itemID damage:damage];
+			return [[[MCUIItemView alloc] initWithFrame:frame id:itemID damage:damage] mcui_autorelease];
 	}
 }
 

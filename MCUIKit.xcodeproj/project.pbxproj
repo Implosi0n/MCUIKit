@@ -32,11 +32,27 @@
 		1E0E5A0F198C05B1000ADFB3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E0E5A0E198C05B1000ADFB3 /* Images.xcassets */; };
 		1E144C251988076C00B4A69B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E144C241988076C00B4A69B /* UIKit.framework */; };
 		1E144C271988077200B4A69B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E144C261988077200B4A69B /* Foundation.framework */; };
+		1E1A0F861994402500C1F763 /* MCUITextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C7619932E6E003536BB /* MCUITextField.m */; };
+		1E1A0F871994402900C1F763 /* MCUIKeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C6519932E6E003536BB /* MCUIKeyboardViewController.m */; };
+		1E1A0F881994403600C1F763 /* MCUIItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C6319932E6E003536BB /* MCUIItemView.m */; };
+		1E1A0F891994403A00C1F763 /* MCUIBlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C5F19932E6E003536BB /* MCUIBlockView.m */; };
+		1E1A0F8A1994403A00C1F763 /* MCUIBlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C5F19932E6E003536BB /* MCUIBlockView.m */; };
+		1E1A0F8B1994403E00C1F763 /* MCUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C6119932E6E003536BB /* MCUIButton.m */; };
+		1E1A0F8C1994404800C1F763 /* MCUILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C6819932E6E003536BB /* MCUILabel.m */; };
+		1E1A0F8D1994410800C1F763 /* ItemList.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C5D19932E6E003536BB /* ItemList.m */; };
+		1E1A0F8E1994410800C1F763 /* MCUIPanorama.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C6A19932E6E003536BB /* MCUIPanorama.m */; };
+		1E1A0F8F1994410800C1F763 /* MCUISegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C6C19932E6E003536BB /* MCUISegment.m */; };
+		1E1A0F901994410800C1F763 /* MCUISegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C6E19932E6E003536BB /* MCUISegmentedControl.m */; };
+		1E1A0F911994410800C1F763 /* MCUISlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C7019932E6E003536BB /* MCUISlider.m */; };
+		1E1A0F921994410800C1F763 /* MCUISliderThumbView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C7219932E6E003536BB /* MCUISliderThumbView.m */; };
+		1E1A0F931994410800C1F763 /* MCUISwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C7419932E6E003536BB /* MCUISwitch.m */; };
+		1E1A0F941994410800C1F763 /* NSBundle+MCUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C7819932E6E003536BB /* NSBundle+MCUI.m */; };
+		1E1A0F951994410800C1F763 /* NSObject+MCUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C7A19932E6E003536BB /* NSObject+MCUIKit.m */; };
+		1E1A0F961994410800C1F763 /* UIImage+MCUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C7C19932E6E003536BB /* UIImage+MCUI.m */; };
 		1E3BD594198DC88E006A5D97 /* GraphicsServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E3BD593198DC88E006A5D97 /* GraphicsServices.framework */; };
 		1E6B9C7D19932E6E003536BB /* ItemList.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6B9C5C19932E6E003536BB /* ItemList.h */; };
 		1E6B9C7E19932E6E003536BB /* ItemList.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C5D19932E6E003536BB /* ItemList.m */; };
 		1E6B9C7F19932E6E003536BB /* MCUIBlockView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6B9C5E19932E6E003536BB /* MCUIBlockView.h */; };
-		1E6B9C8019932E6E003536BB /* MCUIBlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C5F19932E6E003536BB /* MCUIBlockView.m */; };
 		1E6B9C8119932E6E003536BB /* MCUIButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6B9C6019932E6E003536BB /* MCUIButton.h */; };
 		1E6B9C8219932E6E003536BB /* MCUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C6119932E6E003536BB /* MCUIButton.m */; };
 		1E6B9C8319932E6E003536BB /* MCUIItemView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6B9C6219932E6E003536BB /* MCUIItemView.h */; };
@@ -208,6 +224,7 @@
 		1E6B9C5B19932E5D003536BB /* MCUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				1E6B9C6619932E6E003536BB /* MCUIKit.h */,
 				1E6B9C5C19932E6E003536BB /* ItemList.h */,
 				1E6B9C5D19932E6E003536BB /* ItemList.m */,
 				1E6B9C5E19932E6E003536BB /* MCUIBlockView.h */,
@@ -218,7 +235,6 @@
 				1E6B9C6319932E6E003536BB /* MCUIItemView.m */,
 				1E6B9C6419932E6E003536BB /* MCUIKeyboardViewController.h */,
 				1E6B9C6519932E6E003536BB /* MCUIKeyboardViewController.m */,
-				1E6B9C6619932E6E003536BB /* MCUIKit.h */,
 				1E6B9C6719932E6E003536BB /* MCUILabel.h */,
 				1E6B9C6819932E6E003536BB /* MCUILabel.m */,
 				1E6B9C6919932E6E003536BB /* MCUIPanorama.h */,
@@ -372,9 +388,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E1A0F8E1994410800C1F763 /* MCUIPanorama.m in Sources */,
+				1E1A0F8D1994410800C1F763 /* ItemList.m in Sources */,
+				1E1A0F921994410800C1F763 /* MCUISliderThumbView.m in Sources */,
+				1E1A0F941994410800C1F763 /* NSBundle+MCUI.m in Sources */,
+				1E1A0F8A1994403A00C1F763 /* MCUIBlockView.m in Sources */,
+				1E1A0F8B1994403E00C1F763 /* MCUIButton.m in Sources */,
+				1E1A0F871994402900C1F763 /* MCUIKeyboardViewController.m in Sources */,
+				1E1A0F881994403600C1F763 /* MCUIItemView.m in Sources */,
+				1E1A0F931994410800C1F763 /* MCUISwitch.m in Sources */,
+				1E1A0F901994410800C1F763 /* MCUISegmentedControl.m in Sources */,
 				1E0E5A0D198C05B1000ADFB3 /* ViewController.m in Sources */,
+				1E1A0F8C1994404800C1F763 /* MCUILabel.m in Sources */,
+				1E1A0F951994410800C1F763 /* NSObject+MCUIKit.m in Sources */,
+				1E1A0F861994402500C1F763 /* MCUITextField.m in Sources */,
+				1E1A0F8F1994410800C1F763 /* MCUISegment.m in Sources */,
 				1E0E5A07198C05B1000ADFB3 /* AppDelegate.m in Sources */,
+				1E1A0F911994410800C1F763 /* MCUISlider.m in Sources */,
 				1E0E5A03198C05B1000ADFB3 /* main.m in Sources */,
+				1E1A0F961994410800C1F763 /* UIImage+MCUI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,10 +425,10 @@
 				1E6B9C8B19932E6E003536BB /* MCUIPanorama.m in Sources */,
 				1E6B9C9119932E6E003536BB /* MCUISlider.m in Sources */,
 				1E6B9C9319932E6E003536BB /* MCUISliderThumbView.m in Sources */,
-				1E6B9C8019932E6E003536BB /* MCUIBlockView.m in Sources */,
 				1E6B9C8F19932E6E003536BB /* MCUISegmentedControl.m in Sources */,
 				1E6B9C9B19932E6E003536BB /* NSObject+MCUIKit.m in Sources */,
 				1E6B9C7E19932E6E003536BB /* ItemList.m in Sources */,
+				1E1A0F891994403A00C1F763 /* MCUIBlockView.m in Sources */,
 				1E6B9C9519932E6E003536BB /* MCUISwitch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -556,11 +588,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
-				CODE_SIGN_IDENTITY = "Silas Self Sign";
+				CODE_SIGN_IDENTITY = "Silas Schwarz";
 				EXECUTABLE_PREFIX = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"${inherited}",
-					"${SRCROOT}/../prefix/Frameworks",
 					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
 				);
 				GCC_PREFIX_HEADER = "";
@@ -569,16 +600,9 @@
 					"$(inherited)",
 					"SRCROOT=@\\\"${SRCROOT}\\\"",
 				);
-				HEADER_SEARCH_PATHS = (
-					"${inherited}",
-					"${SRCROOT}/../prefix/include",
-					/opt/iOSOpenDev/include,
-				);
+				HEADER_SEARCH_PATHS = "${inherited}";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				LIBRARY_SEARCH_PATHS = (
-					"${inherited}",
-					"${SRCROOT}/../prefix/lib",
-				);
+				LIBRARY_SEARCH_PATHS = "${inherited}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -587,24 +611,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
-				CODE_SIGN_IDENTITY = "Silas Self Sign";
+				CODE_SIGN_IDENTITY = "Silas Schwarz";
 				EXECUTABLE_PREFIX = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"${inherited}",
-					"${SRCROOT}/../prefix/Frameworks",
 					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
 				);
 				GCC_PREFIX_HEADER = "";
-				HEADER_SEARCH_PATHS = (
-					"${inherited}",
-					"${SRCROOT}/../prefix/include",
-					/opt/iOSOpenDev/include,
-				);
+				HEADER_SEARCH_PATHS = "${inherited}";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				LIBRARY_SEARCH_PATHS = (
-					"${inherited}",
-					"${SRCROOT}/../prefix/lib",
-				);
+				LIBRARY_SEARCH_PATHS = "${inherited}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

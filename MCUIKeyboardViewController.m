@@ -44,7 +44,7 @@ static BOOL blinkStatus = YES;
 
 - (instancetype)initWithName:(NSString *)name textField:(MCUITextField *)textField {
     if (self = [super init]) {
-		self.text = [textField.text mutableCopy];
+		self.text = textField.text ? [textField.text mutableCopy] : [@"" mutableCopy];
 		self.name = name;
 		self.nameLabel = [[[MCUILabel alloc] initWithFrame:CGRectMake(10, 10 + [[UIApplication sharedApplication] statusBarFrame].size.width, self.view.frame.size.height - 10 - 10 - 132, 16)] mcui_autorelease];
 		self.nameLabel.text = name;
@@ -58,7 +58,7 @@ static BOOL blinkStatus = YES;
 		self.dummyTextField.delegate = self;
 		self.dummyTextField.editable = YES;
 		
-		self.doneButtonCallback = ^(MCUIButton *button) {
+		self.doneButtonCallback = [^(MCUIButton *button) {
 			[self.blinker invalidate];
 			if (!blinkStatus) {
 				[self.text deleteCharactersInRange:NSMakeRange(self.text.length - 1, 1)];
@@ -68,7 +68,7 @@ static BOOL blinkStatus = YES;
 			[self dismissViewControllerAnimated:YES completion:^{
 				
 			}];
-		};
+		} mcui_retain];
 		
 		self.doneButton = [[MCUIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.height - 132, [[UIApplication sharedApplication] statusBarFrame].size.width, 132, 52) callback:self.doneButtonCallback];
 		
@@ -91,7 +91,7 @@ static BOOL blinkStatus = YES;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-	self.blinker = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(blink) userInfo:nil repeats:YES];
+//	self.blinker = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(blink) userInfo:nil repeats:YES];
 	[self.dummyTextField becomeFirstResponder];
 }
 
@@ -137,6 +137,11 @@ static BOOL blinkStatus = YES;
 	_text = text;
 	[self.textView setText:_text];
 	[self.dummyTextField setText:_text];
+}
+
+- (void)mcui_dealloc {
+	[self.doneButtonCallback mcui_release];
+	[super mcui_dealloc];
 }
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "MCUIBlockView.h"
-
+#import "NSObject+MCUIKit.h"
 #import "UIImage+MCUI.h"
 
 @implementation MCUIBlockView {
@@ -43,7 +43,7 @@
 		leftImageView.layer.transform = CATransform3DMakeRotation(-M_PI/2, 0, 1, 0);
 		leftImageView.layer.transform = CATransform3DConcat(leftImageView.layer.transform, rotateAndTilt);
 		
-		UIView *leftDarkener = [[UIView alloc] initWithFrame:leftImageView.bounds];
+		UIView *leftDarkener = [[[UIView alloc] initWithFrame:leftImageView.bounds] mcui_autorelease];
 		leftDarkener.backgroundColor = [UIColor blackColor];
 		leftDarkener.layer.opacity = 0.25;
 		
@@ -56,7 +56,7 @@
 		
 		rightImageView.layer.transform = rotateAndTilt;
 		
-		UIView *rightDarkener = [[UIView alloc] initWithFrame:rightImageView.bounds];
+		UIView *rightDarkener = [[[UIView alloc] initWithFrame:rightImageView.bounds] mcui_autorelease];
 		rightDarkener.backgroundColor = [UIColor blackColor];
 		rightDarkener.layer.opacity = 0.5;
 		

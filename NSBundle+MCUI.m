@@ -59,7 +59,7 @@ BOOL GSFontAddFromFile(const char *path);
 __attribute__((__constructor__)) static void _mcui_initialize() {
 	@autoreleasepool {
 		minecraftSandbox = [MCFindSandboxWithBundleID(@"com.mojang.minecraftpe") mcui_retain];
-		GSFontAddFromFile([[NSBundle mainBundle] mcui_pathForResource:@"minecraft" ofType:@"ttf"].UTF8String);
+		NSLog(@"%@", GSFontAddFromFile([[NSBundle mainBundle] mcui_pathForResource:@"minecraft" ofType:@"ttf"].UTF8String) ? @"YES" : @"NO");
 	}
 }
 

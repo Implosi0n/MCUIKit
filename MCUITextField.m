@@ -28,7 +28,9 @@
 - (void)tapped {
 	MCUIKeyboardViewController *keyboardViewController = [[MCUIKeyboardViewController alloc] initWithName:self.name textField:self];
 	keyboardViewController.text = [[self.label.text mutableCopy] mcui_autorelease];
-	[[[UIApplication sharedApplication].delegate.window rootViewController] presentModalViewController:keyboardViewController animated:YES];
+	[[[UIApplication sharedApplication].delegate.window rootViewController] presentViewController:keyboardViewController animated:YES completion:^{
+		
+	}];
 	[keyboardViewController mcui_release];
 }
 

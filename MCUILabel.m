@@ -11,18 +11,48 @@
 #import "NSObject+MCUIKit.h"
 #import "NSBundle+MCUI.h"
 
-#define kGlyphMainColor [UIColor colorWithRed:203.0/255.0 green:203.0/255.0 blue:203.0/255.0 alpha:1.0]
-#define kGlyphAltColor [UIColor colorWithRed:50.0/255.0 green:50.0/255.0 blue:50.0/255.0 alpha:1.0]
+#define Color(_red, _green, _blue, _alpha) [UIColor colorWithRed:_red ## .0 / 255.0 green:_green ## .0/255.0 blue:_blue ## .0/255.0 alpha:_alpha ## .0/255.0]
 
-@implementation MCUILabel
+@implementation MCUILabel {
+	MCUILabelStyle _style;
+}
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-		self.textColor = kGlyphMainColor;
-//		self.shadowColor = kGlyphAltColor;
+		self.style = kMCUILabelStyleShadowed;
 		self.font = [UIFont fontWithName:@"Minecraft" size:16.0];
     }
     return self;
+}
+
+- (MCUILabelStyle)style {
+	return _style;
+}
+
+- (void)setStyle:(MCUILabelStyle)style {
+	_style = style;
+	UIColor *mainColor = [UIColor blackColor];
+	UIColor *altColor = [UIColor blackColor];
+	CGSize offset = CGSizeMake(0, 0);
+	switch (style) {
+		case kMCUILabelStylePlain:
+			break;
+		case kMCUILabelStyleShadowed:
+			mainColor = Color(203, 203, 203, 255);
+			altColor = Color(50, 50, 50, 255);
+			offset = CGSizeMake(2, 2);
+			break;
+		case kMCUILabelStyleMenu:
+			mainColor = Color(253, 253, 253, 255);
+			altColor = Color(62, 62, 62, 255);
+			offset = CGSizeMake(2, 2);
+			break;
+		default:
+			break;
+	}
+	self.textColor = mainColor;
+	self.shadowColor = altColor;
+	self.shadowOffset = offset;
 }
 
 @end

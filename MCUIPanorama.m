@@ -81,11 +81,14 @@
 }
 
 - (void)pan {
+	self.shouldPan = YES;
 	[UIView animateWithDuration:2.0 delay:0.0 options:UIViewAnimationOptionCurveLinear animations:^{
-		_hAngle += 0.07;
+		_hAngle += 0.05;
 		[self render];
 	} completion:^(BOOL finished) {
-		[self pan];
+		if (self.shouldPan) {
+			[self pan];
+		}
 	}];
 }
 

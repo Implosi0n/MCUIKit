@@ -13,6 +13,7 @@
 #import "MCUISegmentedControl.h"
 #import "MCUISwitch.h"
 #import "UIImage+MCUI.h"
+#import "MCUITextField.h"
 
 #import "MCUIItemView.h"
 
@@ -143,6 +144,10 @@ void PrintTransform(CATransform3D t) {
 
 - (void)viewDidAppear:(BOOL)animated {
 	[panorama pan];
+	
+	[self.view addSubview:[[MCUITextField alloc] initWithFrame:CGRectMake(20, 200, 200, 36) callback:^(MCUITextField *field, NSString *text) {
+		
+	}]];
 }
 
 - (void)didReceiveMemoryWarning

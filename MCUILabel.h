@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum {
+	kMCUILabelStylePlain = 0,
+	kMCUILabelStyleShadowed = 1,
+	kMCUILabelStyleMenu = 2
+} MCUILabelStyle;
+
 @interface MCUILabel : UILabel
+
+@property (assign) MCUILabelStyle style;
 
 @end

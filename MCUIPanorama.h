@@ -22,6 +22,8 @@
 @property (assign) CGFloat hAngle;
 @property (assign) CGFloat vAngle;
 
+@property (assign) BOOL shouldPan;
+
 - (void)render;
 - (void)pan;
 

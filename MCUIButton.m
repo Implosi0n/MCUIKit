@@ -29,16 +29,18 @@
 
 - (void)moveDown:(UIButton *)sender {
 	[sender setTitleEdgeInsets:UIEdgeInsetsMake((self.frame.size.height - self.titleLabel.frame.size.height)/2.0 + 2, (self.frame.size.width - self.titleLabel.frame.size.width)/2.0 + 1, 0, 0)];
+	[sender setImageEdgeInsets:UIEdgeInsetsMake((self.frame.size.height - self.imageView.image.size.height)/2.0 + 2, (self.frame.size.width - self.imageView.image.size.width)/2.0 + 1, 0, 0)];
 }
 
 - (void)moveBack:(UIButton *)sender {
 	[sender setTitleEdgeInsets:UIEdgeInsetsMake((self.frame.size.height - self.titleLabel.frame.size.height)/2.0, (self.frame.size.width - self.titleLabel.frame.size.width)/2.0 + 1, 0, 0)];
+	[sender setImageEdgeInsets:UIEdgeInsetsMake((self.frame.size.height - self.imageView.image.size.height)/2.0, (self.frame.size.width - self.imageView.image.size.width)/2.0 + 1, 0, 0)];
 	self.callback(self);
 }
 
 - (instancetype)initWithFrame:(CGRect)frame callback:(void (^)(MCUIButton *))callback {
     if (self = [super initWithFrame:frame]) {
-		self.callback = callback;
+		self.callback = [callback mcui_retain];
 		UIImage *spritesheet = [UIImage mcui_imageNamed:@"spritesheet.png"];
 		UIImage *pressedImage = [spritesheet mcui_subImageWithFrame:CGRectMake(0, 32, 8, 8)];
 		pressedImage = [pressedImage mcui_resize:CGSizeMake(16, 16)];
@@ -69,6 +71,16 @@
 	[super setTitle:title forState:state];
 	CGSize textSize = [title sizeWithFont:[UIFont fontWithName:@"Minecraft" size:16.0]];
 	[self setTitleEdgeInsets:UIEdgeInsetsMake((self.frame.size.height - textSize.height)/2.0, (self.frame.size.width - textSize.width)/2.0 + 1, 0, 0)];
+}
+
+- (void)setImage:(UIImage *)image forState:(UIControlState)state {
+	[super setImage:image forState:state];
+	[self setImageEdgeInsets:UIEdgeInsetsMake((self.frame.size.height - image.size.height)/2.0, (self.frame.size.width - image.size.width)/2.0 + 1, 0, 0)];
+}
+
+- (void)mcui_dealloc {
+	[self.callback mcui_release];
+	[super mcui_dealloc];
 }
 
 @end
