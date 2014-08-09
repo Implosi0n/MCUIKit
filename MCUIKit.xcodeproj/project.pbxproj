@@ -50,6 +50,7 @@
 		1E1A0F951994410800C1F763 /* NSObject+MCUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C7A19932E6E003536BB /* NSObject+MCUIKit.m */; };
 		1E1A0F961994410800C1F763 /* UIImage+MCUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C7C19932E6E003536BB /* UIImage+MCUI.m */; };
 		1E3BD594198DC88E006A5D97 /* GraphicsServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E3BD593198DC88E006A5D97 /* GraphicsServices.framework */; };
+		1E4BA1161996AB42007F0681 /* MCUIKitHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E4BA1151996AB42007F0681 /* MCUIKitHook.h */; };
 		1E6B9C7D19932E6E003536BB /* ItemList.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6B9C5C19932E6E003536BB /* ItemList.h */; };
 		1E6B9C7E19932E6E003536BB /* ItemList.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C5D19932E6E003536BB /* ItemList.m */; };
 		1E6B9C7F19932E6E003536BB /* MCUIBlockView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6B9C5E19932E6E003536BB /* MCUIBlockView.h */; };
@@ -59,7 +60,6 @@
 		1E6B9C8419932E6E003536BB /* MCUIItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C6319932E6E003536BB /* MCUIItemView.m */; };
 		1E6B9C8519932E6E003536BB /* MCUIKeyboardViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6B9C6419932E6E003536BB /* MCUIKeyboardViewController.h */; };
 		1E6B9C8619932E6E003536BB /* MCUIKeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C6519932E6E003536BB /* MCUIKeyboardViewController.m */; };
-		1E6B9C8719932E6E003536BB /* MCUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6B9C6619932E6E003536BB /* MCUIKit.h */; };
 		1E6B9C8819932E6E003536BB /* MCUILabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6B9C6719932E6E003536BB /* MCUILabel.h */; };
 		1E6B9C8919932E6E003536BB /* MCUILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C6819932E6E003536BB /* MCUILabel.m */; };
 		1E6B9C8A19932E6E003536BB /* MCUIPanorama.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6B9C6919932E6E003536BB /* MCUIPanorama.h */; };
@@ -104,6 +104,7 @@
 		1E144C261988077200B4A69B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1E23A30D198AA09400F78F2B /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		1E3BD593198DC88E006A5D97 /* GraphicsServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GraphicsServices.framework; path = System/Library/PrivateFrameworks/GraphicsServices.framework; sourceTree = SDKROOT; };
+		1E4BA1151996AB42007F0681 /* MCUIKitHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUIKitHook.h; sourceTree = "<group>"; };
 		1E6B9C5C19932E6E003536BB /* ItemList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemList.h; sourceTree = "<group>"; };
 		1E6B9C5D19932E6E003536BB /* ItemList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemList.m; sourceTree = "<group>"; };
 		1E6B9C5E19932E6E003536BB /* MCUIBlockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUIBlockView.h; sourceTree = "<group>"; };
@@ -114,7 +115,6 @@
 		1E6B9C6319932E6E003536BB /* MCUIItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCUIItemView.m; sourceTree = "<group>"; };
 		1E6B9C6419932E6E003536BB /* MCUIKeyboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUIKeyboardViewController.h; sourceTree = "<group>"; };
 		1E6B9C6519932E6E003536BB /* MCUIKeyboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCUIKeyboardViewController.m; sourceTree = "<group>"; };
-		1E6B9C6619932E6E003536BB /* MCUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUIKit.h; sourceTree = "<group>"; };
 		1E6B9C6719932E6E003536BB /* MCUILabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUILabel.h; sourceTree = "<group>"; };
 		1E6B9C6819932E6E003536BB /* MCUILabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCUILabel.m; sourceTree = "<group>"; };
 		1E6B9C6919932E6E003536BB /* MCUIPanorama.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUIPanorama.h; sourceTree = "<group>"; };
@@ -224,7 +224,7 @@
 		1E6B9C5B19932E5D003536BB /* MCUIKit */ = {
 			isa = PBXGroup;
 			children = (
-				1E6B9C6619932E6E003536BB /* MCUIKit.h */,
+				1E4BA1151996AB42007F0681 /* MCUIKitHook.h */,
 				1E6B9C5C19932E6E003536BB /* ItemList.h */,
 				1E6B9C5D19932E6E003536BB /* ItemList.m */,
 				1E6B9C5E19932E6E003536BB /* MCUIBlockView.h */,
@@ -281,9 +281,9 @@
 				1E6B9C8519932E6E003536BB /* MCUIKeyboardViewController.h in Headers */,
 				1E6B9C8319932E6E003536BB /* MCUIItemView.h in Headers */,
 				1E6B9C7D19932E6E003536BB /* ItemList.h in Headers */,
+				1E4BA1161996AB42007F0681 /* MCUIKitHook.h in Headers */,
 				1E6B9C7F19932E6E003536BB /* MCUIBlockView.h in Headers */,
 				1E6B9C8119932E6E003536BB /* MCUIButton.h in Headers */,
-				1E6B9C8719932E6E003536BB /* MCUIKit.h in Headers */,
 				1E6B9C9219932E6E003536BB /* MCUISliderThumbView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

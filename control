@@ -1,11 +1,11 @@
-Package: com.zcodemt.mcuikit
-Name: MCUIKit
+Package: com.zcodemt.mcuikithook
+Name: MCUIKitHook
 Architecture: iphoneos-arm
 Version: 0.1.0-1
 Section: Minecraft
-Description: MCUIKit is a framework which implements Minecraft Pocket Edition UI features in Objective-C. Source at https://github.com/ZCodeMT/MCUIKit.
+Description: MCUIKit
 Author: ZCodeMT
 Maintainer: ZCodeMT
-Depends:
+
 
 
