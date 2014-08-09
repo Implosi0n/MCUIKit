@@ -116,7 +116,7 @@ void PrintTransform(CATransform3D t) {
 	
 	/* Block */
 	
-	[self.view addSubview:[MCUIItemView itemViewWithFrame:CGRectMake(20, 20, 128, 128) id:4 damage:0]];
+	[self.view addSubview:[MCUIItemView itemViewWithFrame:CGRectMake(20, 20, 128, 128) id:5 damage:1]];
 	
 	/* End Block */
 	
