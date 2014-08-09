@@ -33,7 +33,9 @@ static UIImage *items_opaque;
 }
 
 + (NSDictionary *)mcui_itemWithID:(uint16_t)imageID damage:(uint16_t)damage {
-	return ItemList()[MCUIItem(imageID, damage)] ? ItemList()[MCUIItem(imageID, damage)] : ItemList()[MCUIItem(imageID, 0)];
+	NSString *key = MCUIItem(imageID, damage);
+	NSString *noDamageKey = MCUIItem(imageID, 0);
+	return (ItemList()[key]) ? (ItemList()[key]) : (ItemList()[noDamageKey]);
 }
 
 + (UIImage *)mcui_imageWithID:(uint16_t)imageID damage:(uint16_t)damage {
