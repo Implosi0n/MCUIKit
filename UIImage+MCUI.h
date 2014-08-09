@@ -11,7 +11,8 @@
 typedef enum {
 	kMCUIImageUnknown = -1,
 	kMCUIImageBlock = 0,
-	kMCUIImageItem = 1
+	kMCUIImageItem = 1,
+	kMCUIImageMultiBlock = 4
 } MCUIImageType;
 
 @interface UIImage (MCUI)

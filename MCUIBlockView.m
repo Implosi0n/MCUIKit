@@ -25,6 +25,7 @@
 		CATransform3D rotateAndTilt = CATransform3DMakeRotation(-M_PI/4, 0, 1, 0);
 		rotateAndTilt = CATransform3DConcat(rotateAndTilt, CATransform3DMakeRotation(theta, 1, 0, 0));
 		
+		MCUIImageType type = [UIImage mcui_typeOfImageWithID:itemID damage:damage];
 		NSArray *images = [UIImage mcui_imagesWithID:itemID damage:damage];
 		if (!images || !images.count) {
 			return self;
@@ -38,7 +39,7 @@
 		topImageView.layer.transform = CATransform3DMakeRotation(M_PI/2, 1, 0, 0);
 		topImageView.layer.transform = CATransform3DConcat(topImageView.layer.transform, rotateAndTilt);
 		
-		leftImageView = [[UIImageView alloc] initWithImage:[images[0] mcui_resize:CGSizeMake(faceWidth, faceWidth)]];
+		leftImageView = [[UIImageView alloc] initWithImage:[images[type == 0 ? 0 : 1] mcui_resize:CGSizeMake(faceWidth, faceWidth)]];
 		leftImageView.frame = (CGRect){ .origin = CGPointZero, .size = leftImageView.frame.size };
 		leftImageView.layer.anchorPoint = CGPointMake(0, 0);
 		[self addSubview:leftImageView];
@@ -52,7 +53,7 @@
 		
 		[leftImageView addSubview:leftDarkener];
 		
-		rightImageView = [[UIImageView alloc] initWithImage:[images[0] mcui_resize:CGSizeMake(faceWidth, faceWidth)]];
+		rightImageView = [[UIImageView alloc] initWithImage:[images[type == 0 ? 0 : 2] mcui_resize:CGSizeMake(faceWidth, faceWidth)]];
 		rightImageView.frame = (CGRect){ .origin = CGPointZero, .size = rightImageView.frame.size };
 		rightImageView.layer.anchorPoint = CGPointMake(0, 0);
 		[self addSubview:rightImageView];
