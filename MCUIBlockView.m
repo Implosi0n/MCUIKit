@@ -25,7 +25,7 @@
 		CATransform3D rotateAndTilt = CATransform3DMakeRotation(-M_PI/4, 0, 1, 0);
 		rotateAndTilt = CATransform3DConcat(rotateAndTilt, CATransform3DMakeRotation(theta, 1, 0, 0));
 		
-		NSArray *images = [UIImage mcui_imagesWithID:17 damage:2];
+		NSArray *images = [UIImage mcui_imagesWithID:itemID damage:damage];
 		
 		topImageView = [[UIImageView alloc] initWithImage:[images[0] mcui_resize:CGSizeMake(faceWidth, faceWidth)]];
 		topImageView.frame = (CGRect){ .origin = CGPointZero, .size = topImageView.frame.size };
