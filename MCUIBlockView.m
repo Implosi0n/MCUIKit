@@ -68,9 +68,6 @@
 		topImageView.layer.transform = CATransform3DConcat(topImageView.layer.transform, relocate);
 		leftImageView.layer.transform = CATransform3DConcat(leftImageView.layer.transform, relocate);
 		rightImageView.layer.transform = CATransform3DConcat(rightImageView.layer.transform, relocate);
-		
-		self.layer.borderColor = [UIColor redColor].CGColor;
-		self.layer.borderWidth = 0.5;
 	}
 	return self;
 }
