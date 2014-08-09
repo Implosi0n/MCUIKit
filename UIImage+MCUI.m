@@ -37,7 +37,8 @@ static UIImage *items_opaque;
 }
 
 + (UIImage *)mcui_imageWithID:(uint16_t)imageID damage:(uint16_t)damage {
-	return [self mcui_imagesWithID:imageID damage:damage][0];
+	NSArray *array = [self mcui_imagesWithID:imageID damage:damage];
+	return array.count ? array[0] : nil;
 }
 
 + (UIImage *)mcui_imageWithItem:(NSDictionary *)item {
@@ -56,7 +57,8 @@ static UIImage *items_opaque;
 	NSDictionary *item = [self mcui_itemWithID:imageID damage:damage];
 	NSMutableArray *ret = [NSMutableArray array];
 	for (NSDictionary *image in item[@"Images"]) {
-		[ret addObject:[self mcui_imageWithItem:image]];
+		UIImage *next = [self mcui_imageWithItem:image];
+		if (next) [ret addObject:next];
 	}
 	return [NSArray arrayWithArray:ret];
 }
