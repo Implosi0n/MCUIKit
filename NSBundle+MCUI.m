@@ -76,11 +76,7 @@ __attribute__((__constructor__)) static void _mcui_initialize() {
 }
 
 - (NSString *)mcui_pathForResource:(NSString *)name ofType:(NSString *)ext {
-#if VERSION == OUTSIDE
 	return [[[self mcui_bundlePath] stringByAppendingPathComponent:name] stringByAppendingPathExtension:ext];
-#else
-	return [self bundlePath];
-#endif
 }
 
 @end
