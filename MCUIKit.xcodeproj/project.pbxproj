@@ -105,6 +105,7 @@
 		1E23A30D198AA09400F78F2B /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		1E3BD593198DC88E006A5D97 /* GraphicsServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GraphicsServices.framework; path = System/Library/PrivateFrameworks/GraphicsServices.framework; sourceTree = SDKROOT; };
 		1E4BA1151996AB42007F0681 /* MCUIKitHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUIKitHook.h; sourceTree = "<group>"; };
+		1E4BA1171996C4AD007F0681 /* control */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = control; sourceTree = "<group>"; };
 		1E6B9C5C19932E6E003536BB /* ItemList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemList.h; sourceTree = "<group>"; };
 		1E6B9C5D19932E6E003536BB /* ItemList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemList.m; sourceTree = "<group>"; };
 		1E6B9C5E19932E6E003536BB /* MCUIBlockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUIBlockView.h; sourceTree = "<group>"; };
@@ -192,6 +193,7 @@
 		1E144C131988075700B4A69B = {
 			isa = PBXGroup;
 			children = (
+				1E4BA1171996C4AD007F0681 /* control */,
 				1E23A30D198AA09400F78F2B /* Makefile */,
 				1E6B9C5B19932E5D003536BB /* MCUIKit */,
 				1E0E59FC198C05B1000ADFB3 /* MCUIKitTest */,
