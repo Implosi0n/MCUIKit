@@ -21,35 +21,9 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		1E0E59F8198C05B1000ADFB3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E144C261988077200B4A69B /* Foundation.framework */; };
-		1E0E59FA198C05B1000ADFB3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E0E59F9198C05B1000ADFB3 /* CoreGraphics.framework */; };
-		1E0E59FB198C05B1000ADFB3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E144C241988076C00B4A69B /* UIKit.framework */; };
-		1E0E5A01198C05B1000ADFB3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1E0E59FF198C05B1000ADFB3 /* InfoPlist.strings */; };
-		1E0E5A03198C05B1000ADFB3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E0E5A02198C05B1000ADFB3 /* main.m */; };
-		1E0E5A07198C05B1000ADFB3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E0E5A06198C05B1000ADFB3 /* AppDelegate.m */; };
-		1E0E5A0A198C05B1000ADFB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E0E5A08198C05B1000ADFB3 /* Main.storyboard */; };
-		1E0E5A0D198C05B1000ADFB3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E0E5A0C198C05B1000ADFB3 /* ViewController.m */; };
-		1E0E5A0F198C05B1000ADFB3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E0E5A0E198C05B1000ADFB3 /* Images.xcassets */; };
 		1E144C251988076C00B4A69B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E144C241988076C00B4A69B /* UIKit.framework */; };
 		1E144C271988077200B4A69B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E144C261988077200B4A69B /* Foundation.framework */; };
-		1E1A0F861994402500C1F763 /* MCUITextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C7619932E6E003536BB /* MCUITextField.m */; };
-		1E1A0F871994402900C1F763 /* MCUIKeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C6519932E6E003536BB /* MCUIKeyboardViewController.m */; };
-		1E1A0F881994403600C1F763 /* MCUIItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C6319932E6E003536BB /* MCUIItemView.m */; };
 		1E1A0F891994403A00C1F763 /* MCUIBlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C5F19932E6E003536BB /* MCUIBlockView.m */; };
-		1E1A0F8A1994403A00C1F763 /* MCUIBlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C5F19932E6E003536BB /* MCUIBlockView.m */; };
-		1E1A0F8B1994403E00C1F763 /* MCUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C6119932E6E003536BB /* MCUIButton.m */; };
-		1E1A0F8C1994404800C1F763 /* MCUILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C6819932E6E003536BB /* MCUILabel.m */; };
-		1E1A0F8D1994410800C1F763 /* ItemList.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C5D19932E6E003536BB /* ItemList.m */; };
-		1E1A0F8E1994410800C1F763 /* MCUIPanorama.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C6A19932E6E003536BB /* MCUIPanorama.m */; };
-		1E1A0F8F1994410800C1F763 /* MCUISegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C6C19932E6E003536BB /* MCUISegment.m */; };
-		1E1A0F901994410800C1F763 /* MCUISegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C6E19932E6E003536BB /* MCUISegmentedControl.m */; };
-		1E1A0F911994410800C1F763 /* MCUISlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C7019932E6E003536BB /* MCUISlider.m */; };
-		1E1A0F921994410800C1F763 /* MCUISliderThumbView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C7219932E6E003536BB /* MCUISliderThumbView.m */; };
-		1E1A0F931994410800C1F763 /* MCUISwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C7419932E6E003536BB /* MCUISwitch.m */; };
-		1E1A0F941994410800C1F763 /* NSBundle+MCUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C7819932E6E003536BB /* NSBundle+MCUI.m */; };
-		1E1A0F951994410800C1F763 /* NSObject+MCUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C7A19932E6E003536BB /* NSObject+MCUIKit.m */; };
-		1E1A0F961994410800C1F763 /* UIImage+MCUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C7C19932E6E003536BB /* UIImage+MCUI.m */; };
-		1E3BD594198DC88E006A5D97 /* GraphicsServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E3BD593198DC88E006A5D97 /* GraphicsServices.framework */; };
 		1E4BA1161996AB42007F0681 /* MCUIKitHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E4BA1151996AB42007F0681 /* MCUIKitHook.h */; };
 		1E6B9C7D19932E6E003536BB /* ItemList.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6B9C5C19932E6E003536BB /* ItemList.h */; };
 		1E6B9C7E19932E6E003536BB /* ItemList.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B9C5D19932E6E003536BB /* ItemList.m */; };
@@ -86,18 +60,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1E0E59F7198C05B1000ADFB3 /* MCUIKitTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MCUIKitTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E0E59F9198C05B1000ADFB3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		1E0E59FE198C05B1000ADFB3 /* MCUIKitTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MCUIKitTest-Info.plist"; sourceTree = "<group>"; };
-		1E0E5A00198C05B1000ADFB3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1E0E5A02198C05B1000ADFB3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1E0E5A04198C05B1000ADFB3 /* MCUIKitTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MCUIKitTest-Prefix.pch"; sourceTree = "<group>"; };
-		1E0E5A05198C05B1000ADFB3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		1E0E5A06198C05B1000ADFB3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1E0E5A09198C05B1000ADFB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1E0E5A0B198C05B1000ADFB3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1E0E5A0C198C05B1000ADFB3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		1E0E5A0E198C05B1000ADFB3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1E0E5A15198C05B1000ADFB3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		1E144C1C1988075700B4A69B /* MCUIKit.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = MCUIKit.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E144C241988076C00B4A69B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -141,17 +104,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1E0E59F4198C05B1000ADFB3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1E0E59FA198C05B1000ADFB3 /* CoreGraphics.framework in Frameworks */,
-				1E0E59FB198C05B1000ADFB3 /* UIKit.framework in Frameworks */,
-				1E3BD594198DC88E006A5D97 /* GraphicsServices.framework in Frameworks */,
-				1E0E59F8198C05B1000ADFB3 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1E144C191988075700B4A69B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -165,38 +117,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1E0E59FC198C05B1000ADFB3 /* MCUIKitTest */ = {
-			isa = PBXGroup;
-			children = (
-				1E0E5A05198C05B1000ADFB3 /* AppDelegate.h */,
-				1E0E5A06198C05B1000ADFB3 /* AppDelegate.m */,
-				1E0E5A08198C05B1000ADFB3 /* Main.storyboard */,
-				1E0E5A0B198C05B1000ADFB3 /* ViewController.h */,
-				1E0E5A0C198C05B1000ADFB3 /* ViewController.m */,
-				1E0E5A0E198C05B1000ADFB3 /* Images.xcassets */,
-				1E0E59FD198C05B1000ADFB3 /* Supporting Files */,
-			);
-			path = MCUIKitTest;
-			sourceTree = "<group>";
-		};
-		1E0E59FD198C05B1000ADFB3 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				1E0E59FE198C05B1000ADFB3 /* MCUIKitTest-Info.plist */,
-				1E0E59FF198C05B1000ADFB3 /* InfoPlist.strings */,
-				1E0E5A02198C05B1000ADFB3 /* main.m */,
-				1E0E5A04198C05B1000ADFB3 /* MCUIKitTest-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		1E144C131988075700B4A69B = {
 			isa = PBXGroup;
 			children = (
 				1E4BA1171996C4AD007F0681 /* control */,
 				1E23A30D198AA09400F78F2B /* Makefile */,
 				1E6B9C5B19932E5D003536BB /* MCUIKit */,
-				1E0E59FC198C05B1000ADFB3 /* MCUIKitTest */,
 				1E144C231988076100B4A69B /* Frameworks */,
 				1E144C1D1988075700B4A69B /* Products */,
 			);
@@ -206,7 +132,6 @@
 			isa = PBXGroup;
 			children = (
 				1E144C1C1988075700B4A69B /* MCUIKit.dylib */,
-				1E0E59F7198C05B1000ADFB3 /* MCUIKitTest.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -293,23 +218,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1E0E59F6198C05B1000ADFB3 /* MCUIKitTest */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1E0E5A27198C05B2000ADFB3 /* Build configuration list for PBXNativeTarget "MCUIKitTest" */;
-			buildPhases = (
-				1E0E59F3198C05B1000ADFB3 /* Sources */,
-				1E0E59F4198C05B1000ADFB3 /* Frameworks */,
-				1E0E59F5198C05B1000ADFB3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = MCUIKitTest;
-			productName = MCUIKitTest;
-			productReference = 1E0E59F7198C05B1000ADFB3 /* MCUIKitTest.app */;
-			productType = "com.apple.product-type.application";
-		};
 		1E144C1B1988075700B4A69B /* MCUIKit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E144C201988075700B4A69B /* Build configuration list for PBXNativeTarget "MCUIKit" */;
@@ -350,24 +258,10 @@
 			projectRoot = "";
 			targets = (
 				1E144C1B1988075700B4A69B /* MCUIKit */,
-				1E0E59F6198C05B1000ADFB3 /* MCUIKitTest */,
 				1EE6D6131992C10D00E1C137 /* MCUIKit-Release */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		1E0E59F5198C05B1000ADFB3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1E0E5A0F198C05B1000ADFB3 /* Images.xcassets in Resources */,
-				1E0E5A01198C05B1000ADFB3 /* InfoPlist.strings in Resources */,
-				1E0E5A0A198C05B1000ADFB3 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		1EE6D6171992C11200E1C137 /* ShellScript */ = {
@@ -386,32 +280,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1E0E59F3198C05B1000ADFB3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1E1A0F8E1994410800C1F763 /* MCUIPanorama.m in Sources */,
-				1E1A0F8D1994410800C1F763 /* ItemList.m in Sources */,
-				1E1A0F921994410800C1F763 /* MCUISliderThumbView.m in Sources */,
-				1E1A0F941994410800C1F763 /* NSBundle+MCUI.m in Sources */,
-				1E1A0F8A1994403A00C1F763 /* MCUIBlockView.m in Sources */,
-				1E1A0F8B1994403E00C1F763 /* MCUIButton.m in Sources */,
-				1E1A0F871994402900C1F763 /* MCUIKeyboardViewController.m in Sources */,
-				1E1A0F881994403600C1F763 /* MCUIItemView.m in Sources */,
-				1E1A0F931994410800C1F763 /* MCUISwitch.m in Sources */,
-				1E1A0F901994410800C1F763 /* MCUISegmentedControl.m in Sources */,
-				1E0E5A0D198C05B1000ADFB3 /* ViewController.m in Sources */,
-				1E1A0F8C1994404800C1F763 /* MCUILabel.m in Sources */,
-				1E1A0F951994410800C1F763 /* NSObject+MCUIKit.m in Sources */,
-				1E1A0F861994402500C1F763 /* MCUITextField.m in Sources */,
-				1E1A0F8F1994410800C1F763 /* MCUISegment.m in Sources */,
-				1E0E5A07198C05B1000ADFB3 /* AppDelegate.m in Sources */,
-				1E1A0F911994410800C1F763 /* MCUISlider.m in Sources */,
-				1E0E5A03198C05B1000ADFB3 /* main.m in Sources */,
-				1E1A0F961994410800C1F763 /* UIImage+MCUI.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1E144C181988075700B4A69B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -437,87 +305,7 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		1E0E59FF198C05B1000ADFB3 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1E0E5A00198C05B1000ADFB3 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		1E0E5A08198C05B1000ADFB3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1E0E5A09198C05B1000ADFB3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		1E0E5A23198C05B2000ADFB3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "Silas Self Sign";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Silas Self Sign";
-				FRAMEWORK_SEARCH_PATHS = (
-					"${inherited}",
-					"${SRCROOT}/../prefix/Frameworks",
-					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MCUIKitTest/MCUIKitTest-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-					"SRCROOT=@\\\"${SRCROOT}\\\"",
-				);
-				HEADER_SEARCH_PATHS = (
-					"${inherited}",
-					"${SRCROOT}/../prefix/include",
-				);
-				INFOPLIST_FILE = "MCUIKitTest/MCUIKitTest-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"${inherited}",
-					"${SRCROOT}/../prefix/lib",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		1E0E5A24198C05B2000ADFB3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "Silas Self Sign";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Silas Self Sign";
-				FRAMEWORK_SEARCH_PATHS = (
-					"${inherited}",
-					"${SRCROOT}/../prefix/Frameworks",
-					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MCUIKitTest/MCUIKitTest-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"${inherited}",
-					"${SRCROOT}/../prefix/include",
-				);
-				INFOPLIST_FILE = "MCUIKitTest/MCUIKitTest-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"${inherited}",
-					"${SRCROOT}/../prefix/lib",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
 		1E144C1E1988075700B4A69B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -644,15 +432,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1E0E5A27198C05B2000ADFB3 /* Build configuration list for PBXNativeTarget "MCUIKitTest" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1E0E5A23198C05B2000ADFB3 /* Debug */,
-				1E0E5A24198C05B2000ADFB3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		1E144C171988075700B4A69B /* Build configuration list for PBXProject "MCUIKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
