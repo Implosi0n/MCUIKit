@@ -54,6 +54,22 @@
 				rotateAndTilt = CATransform3DTranslate(rotateAndTilt, 0, faceWidth / 2.0, 0);
 			}
 				break;
+			case kMCUIImageCarpet:
+			{
+				UIImage *snapshotImage = images[0];
+				snapshotImage = [snapshotImage mcui_subImageWithFrame:CGRectMake(0, 0, snapshotImage.size.width, snapshotImage.size.height / 16.0)];
+				snapshotImage = [snapshotImage mcui_resize:CGSizeMake(faceWidth, faceWidth / 2.0)];
+				
+				UIGraphicsBeginImageContext(CGSizeMake(faceWidth, faceWidth));
+				CGContextRef c = UIGraphicsGetCurrentContext();
+				CGContextSetInterpolationQuality(c, kCGInterpolationNone);
+				[snapshotImage drawInRect:CGRectMake(0, 0, faceWidth, faceWidth / 16.0)];
+				snapshotImage = UIGraphicsGetImageFromCurrentImageContext();
+				UIGraphicsEndImageContext();
+				image2 = snapshotImage;
+				image3 = snapshotImage;
+				rotateAndTilt = CATransform3DTranslate(rotateAndTilt, 0, 15 * faceWidth / 16.0, 0);
+			}
 			default:
 				break;
 		}
@@ -111,6 +127,12 @@
 			{
 				leftDarkener.frame = CGRectMake(leftDarkener.frame.origin.x, leftDarkener.frame.origin.y, leftDarkener.frame.size.width, leftDarkener.frame.size.height / 2.0);
 				rightDarkener.frame = CGRectMake(rightDarkener.frame.origin.x, rightDarkener.frame.origin.y, rightDarkener.frame.size.width, rightDarkener.frame.size.height / 2.0);
+			}
+				break;
+			case kMCUIImageCarpet:
+			{
+				leftDarkener.frame = CGRectMake(leftDarkener.frame.origin.x, leftDarkener.frame.origin.y, leftDarkener.frame.size.width, leftDarkener.frame.size.height / 16.0);
+				rightDarkener.frame = CGRectMake(rightDarkener.frame.origin.x, rightDarkener.frame.origin.y, rightDarkener.frame.size.width, rightDarkener.frame.size.height / 16.0);
 			}
 				break;
 			default:

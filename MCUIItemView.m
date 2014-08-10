@@ -22,6 +22,7 @@
 		case kMCUIImageBlock:
 		case kMCUIImageMultiBlock:
 		case kMCUIImageSlab:
+		case kMCUIImageCarpet:
 			return [[[MCUIBlockView alloc] initWithFrame:frame id:itemID damage:damage] mcui_autorelease];
 		default:
 			return [[[MCUIItemView alloc] initWithFrame:frame id:itemID damage:damage] mcui_autorelease];
