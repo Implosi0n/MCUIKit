@@ -19,7 +19,8 @@ typedef enum {
 	kMCUIImageCactus = 6,
 	kMCUIImageFencePost = 7,
 	kMCUIImageFenceGate = 8,
-	kMCUIImageWall = 9
+	kMCUIImageWall = 9,
+	kMCUIImageFire = 10
 } MCUIImageType;
 
 @interface UIImage (MCUI)

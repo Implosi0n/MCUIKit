@@ -1399,7 +1399,7 @@ NSDictionary *ItemList() {
 						@"x": @0,
 						@"y": @0,
 						@"count": @32,
-						@"file": @"terrain-atlas.tga"
+						@"file": @"fire_atlas.png"
 					}
 				]
 			},
