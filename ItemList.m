@@ -1147,6 +1147,19 @@ NSDictionary *ItemList() {
 					}
 				]
 			},
+			@"043 00": @{
+				@"renderType": @0,
+				@"id": @43,
+				@"Name": @"Double Slabs",
+				@"damage": @0,
+				@"Images": @[
+					@{
+						@"x": @8,
+						@"y": @3,
+						@"file": @"terrain-atlas.tga"
+					}
+				]
+			},
 			@"044 00": @{
 				@"renderType": @2,
 				@"id": @44,
@@ -1328,7 +1341,7 @@ NSDictionary *ItemList() {
 				]
 			},
 			@"047 00": @{
-				@"renderType": @0,
+				@"renderType": @4,
 				@"id": @47,
 				@"Name": @"Bookshelf",
 				@"damage": @0,
@@ -1404,11 +1417,21 @@ NSDictionary *ItemList() {
 				]
 			},
 			@"052 00": @{
-				@"renderType": @0,
+				@"renderType": @4,
 				@"id": @52,
 				@"Name": @"Mob Spawner",
 				@"damage": @0,
 				@"Images": @[
+					@{
+						@"x": @4,
+						@"y": @5,
+						@"file": @"terrain-atlas.tga"
+					},
+					@{
+						@"x": @4,
+						@"y": @5,
+						@"file": @"terrain-atlas.tga"
+					},
 					@{
 						@"x": @4,
 						@"y": @5,
@@ -1506,6 +1529,19 @@ NSDictionary *ItemList() {
 					}
 				]
 			},
+			@"059 00": @{
+				@"renderType": @1,
+				@"id": @59,
+				@"Name": @"Wheat Block",
+				@"damage": @0,
+				@"Images": @[
+					@{
+						@"x": @5,
+						@"y": @6,
+						@"file": @"terrain-atlas.tga"
+					}
+				]
+			},
 			@"060 00": @{
 				@"renderType": @4,
 				@"id": @60,
@@ -1541,12 +1577,12 @@ NSDictionary *ItemList() {
 						@"file": @"terrain-atlas.tga"
 					},
 					@{
-						@"x": @8,
+						@"x": @10,
 						@"y": @4,
 						@"file": @"terrain-atlas.tga"
 					},
 					@{
-						@"x": @10,
+						@"x": @8,
 						@"y": @4,
 						@"file": @"terrain-atlas.tga"
 					}
@@ -1632,6 +1668,19 @@ NSDictionary *ItemList() {
 					}
 				]
 			},
+			@"074 00": @{
+				@"renderType": @0,
+				@"id": @74,
+				@"Name": @"Lit Redstone Ore",
+				@"damage": @0,
+				@"Images": @[
+					@{
+						@"x": @29,
+						@"y": @3,
+						@"file": @"terrain-atlas.tga"
+					}
+				]
+			},
 			@"078 00": @{
 				@"renderType": @5,
 				@"id": @78,
@@ -1702,6 +1751,19 @@ NSDictionary *ItemList() {
 					}
 				]
 			},
+			@"083 00": @{
+				@"renderType": @1,
+				@"id": @83,
+				@"Name": @"Sugarcane Block",
+				@"damage": @0,
+				@"Images": @[
+					@{
+						@"x": @11,
+						@"y": @5,
+						@"file": @"terrain-atlas.tga"
+					}
+				]
+			},
 			@"085 00": @{
 				@"renderType": @7,
 				@"id": @85,
@@ -1709,8 +1771,8 @@ NSDictionary *ItemList() {
 				@"damage": @0,
 				@"Images": @[
 					@{
-						@"x": @14,
-						@"y": @1,
+						@"x": @10,
+						@"y": @9,
 						@"file": @"terrain-atlas.tga"
 					}
 				]
@@ -1727,12 +1789,12 @@ NSDictionary *ItemList() {
 						@"file": @"terrain-atlas.tga"
 					},
 					@{
-						@"x": @8,
+						@"x": @9,
 						@"y": @6,
 						@"file": @"terrain-atlas.tga"
 					},
 					@{
-						@"x": @9,
+						@"x": @8,
 						@"y": @6,
 						@"file": @"terrain-atlas.tga"
 					}
@@ -1776,13 +1838,26 @@ NSDictionary *ItemList() {
 						@"file": @"terrain-atlas.tga"
 					},
 					@{
-						@"x": @8,
+						@"x": @10,
 						@"y": @6,
 						@"file": @"terrain-atlas.tga"
 					},
 					@{
-						@"x": @10,
+						@"x": @8,
 						@"y": @6,
+						@"file": @"terrain-atlas.tga"
+					}
+				]
+			},
+			@"092 00": @{
+				@"renderType": @1,
+				@"id": @92,
+				@"Name": @"Cake Block",
+				@"damage": @0,
+				@"Images": @[
+					@{
+						@"x": @19,
+						@"y": @7,
 						@"file": @"terrain-atlas.tga"
 					}
 				]
@@ -1979,8 +2054,34 @@ NSDictionary *ItemList() {
 					}
 				]
 			},
+			@"104 00": @{
+				@"renderType": @1,
+				@"id": @104,
+				@"Name": @"Pumpkin Stem",
+				@"damage": @0,
+				@"Images": @[
+					@{
+						@"x": @12,
+						@"y": @2,
+						@"file": @"terrain-atlas.tga"
+					}
+				]
+			},
+			@"105 00": @{
+				@"renderType": @1,
+				@"id": @105,
+				@"Name": @"Melon Stem",
+				@"damage": @0,
+				@"Images": @[
+					@{
+						@"x": @12,
+						@"y": @2,
+						@"file": @"terrain-atlas.tga"
+					}
+				]
+			},
 			@"106 00": @{
-				@"renderType": @0,
+				@"renderType": @1,
 				@"id": @106,
 				@"Name": @"Vines",
 				@"damage": @0,
@@ -2463,6 +2564,42 @@ NSDictionary *ItemList() {
 					}
 				]
 			},
+			@"158 04": @{
+				@"renderType": @2,
+				@"id": @158,
+				@"Name": @"Acacia Wooden Slab",
+				@"damage": @4,
+				@"Images": @[
+					@{
+						@"x": @18,
+						@"y": @1,
+						@"file": @"terrain-atlas.tga"
+					},
+					@{
+						@"x": @18,
+						@"y": @1,
+						@"file": @"terrain-atlas.tga"
+					}
+				]
+			},
+			@"158 05": @{
+				@"renderType": @2,
+				@"id": @158,
+				@"Name": @"Dark Oak Wooden Slab",
+				@"damage": @5,
+				@"Images": @[
+					@{
+						@"x": @19,
+						@"y": @1,
+						@"file": @"terrain-atlas.tga"
+					},
+					@{
+						@"x": @19,
+						@"y": @1,
+						@"file": @"terrain-atlas.tga"
+					}
+				]
+			},
 			@"159 00": @{
 				@"renderType": @0,
 				@"id": @159,
@@ -2724,13 +2861,23 @@ NSDictionary *ItemList() {
 				]
 			},
 			@"170 00": @{
-				@"renderType": @0,
+				@"renderType": @4,
 				@"id": @170,
 				@"Name": @"Hay Block",
 				@"damage": @0,
 				@"Images": @[
 					@{
 						@"x": @12,
+						@"y": @8,
+						@"file": @"terrain-atlas.tga"
+					},
+					@{
+						@"x": @13,
+						@"y": @8,
+						@"file": @"terrain-atlas.tga"
+					},
+					@{
+						@"x": @13,
 						@"y": @8,
 						@"file": @"terrain-atlas.tga"
 					}
@@ -2743,8 +2890,8 @@ NSDictionary *ItemList() {
 				@"damage": @0,
 				@"Images": @[
 					@{
-						@"x": @13,
-						@"y": @8,
+						@"x": @23,
+						@"y": @9,
 						@"file": @"terrain-atlas.tga"
 					}
 				]
@@ -3088,13 +3235,23 @@ NSDictionary *ItemList() {
 				]
 			},
 			@"245 00": @{
-				@"renderType": @0,
+				@"renderType": @4,
 				@"id": @245,
 				@"Name": @"Stone Cutter",
 				@"damage": @0,
 				@"Images": @[
 					@{
 						@"x": @14,
+						@"y": @4,
+						@"file": @"terrain-atlas.tga"
+					},
+					@{
+						@"x": @12,
+						@"y": @4,
+						@"file": @"terrain-atlas.tga"
+					},
+					@{
+						@"x": @13,
 						@"y": @4,
 						@"file": @"terrain-atlas.tga"
 					}

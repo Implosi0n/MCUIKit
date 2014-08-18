@@ -38,6 +38,11 @@
 	self.callback(self);
 }
 
+- (void)titleBack:(UIButton *)sender {
+	[sender setTitleEdgeInsets:UIEdgeInsetsMake((self.frame.size.height - self.titleLabel.frame.size.height)/2.0, (self.frame.size.width - self.titleLabel.frame.size.width)/2.0 + 1, 0, 0)];
+	[sender setImageEdgeInsets:UIEdgeInsetsMake((self.frame.size.height - self.imageView.image.size.height)/2.0, (self.frame.size.width - self.imageView.image.size.width)/2.0 + 1, 0, 0)];
+}
+
 - (instancetype)initWithFrame:(CGRect)frame callback:(void (^)(MCUIButton *))callback {
     if (self = [super initWithFrame:frame]) {
 		self.callback = [callback mcui_retain];
@@ -61,16 +66,17 @@
 		[self setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
 		[self setContentVerticalAlignment:UIControlContentVerticalAlignmentTop];
 		
-		[self addTarget:self action:@selector(moveDown:) forControlEvents:UIControlEventTouchDown];
+		[self addTarget:self action:@selector(moveDown:) forControlEvents:UIControlEventTouchDown | UIControlEventTouchDragEnter];
 		[self addTarget:self action:@selector(moveBack:) forControlEvents:UIControlEventTouchUpInside];
+		[self addTarget:self action:@selector(titleBack:) forControlEvents:UIControlEventTouchDragExit];
     }
     return self;
 }
 
 - (void)setTitle:(NSString *)title forState:(UIControlState)state {
 	[super setTitle:title forState:state];
-	CGSize textSize = [title sizeWithFont:[UIFont fontWithName:@"Minecraft" size:16.0]];
-	[self setTitleEdgeInsets:UIEdgeInsetsMake((self.frame.size.height - textSize.height)/2.0, (self.frame.size.width - textSize.width)/2.0 + 1, 0, 0)];
+	
+	[self setTitleEdgeInsets:UIEdgeInsetsMake((self.frame.size.height - self.titleLabel.frame.size.height)/2.0, (self.frame.size.width - self.titleLabel.frame.size.width)/2.0 + 1, 0, 0)];
 }
 
 - (void)setImage:(UIImage *)image forState:(UIControlState)state {
